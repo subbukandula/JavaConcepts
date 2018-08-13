@@ -1,3 +1,31 @@
-Extract War file
+unpack the war file with the jar command.
 jar -xvf yourWARfileName.war
+
+javap command disassembles a class file. The javap command displays information about the fields,constructors and methods present in a class file.
+javap fully_class_name 
+or javap -c fully_class_name
+
+javap -verbose MyClass | findstr "major"  --> to find major version/minor version of class.
+
+Default Heap Sizes of JDK
+java -XX:+PrintFlagsFinal -version  | findstr "InitialHeapSize"  or "MaxHeapSize"
+
+Java Versions:
+============
+Java 1.2 uses major version 46
+Java 1.3 uses major version 47
+Java 1.4 uses major version 48
+Java 5 uses major version 49
+Java 6 uses major version 50
+Java 7 uses major version 51
+Java 8 uses major version 52
+Java 9 uses major version 53
+Java 10 uses major version 54
+
+
+
+
+
+
+
 
