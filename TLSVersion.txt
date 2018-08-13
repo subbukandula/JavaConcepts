@@ -1,0 +1,104 @@
+SSLContext sslcontext=SSLContext.getInstance("TLSv1.2");  
+sslcontext.init(null,null,null);
+SSLContext.setDefault(sslcontext);
+
+  
+   -Djavax.net.debug=all 
+   
+   JAVACMD="$JAVACMD -Ddeployment.security.SSLv2Hello=false -Ddeployment.security.SSLv3=false -Ddeployment.security.TLSv1=false -D\ deployment.security.TLSv1.1=true -Ddeployment.security.TLSv1.2=true"
+   
+   SSLContext context = SSLContext.getInstance("TLS");
+context.init(null,null,null);
+
+SSLSocketFactory factory = (SSLSocketFactory)context.getSocketFactory();
+SSLSocket socket = (SSLSocket)factory.createSocket();
+
+String[] protocols = socket.getSupportedProtocols();
+
+System.out.println("Supported Protocols: " + protocols.length);
+for(int i = 0; i < protocols.length; i++)
+{
+     System.out.println(" " + protocols[i]);
+}
+
+protocols = socket.getEnabledProtocols();
+
+System.out.println("Enabled Protocols: " + protocols.length);
+for(int i = 0; i < protocols.length; i++)
+{
+     System.out.println(" " + protocols[i]);
+}
+
+
+  try {
+        SSLContext ctx = SSLContext.getInstance("TLSv1.2");
+        ctx.init(null, null, null);
+        SSLContext.setDefault(ctx);
+} catch (Exception e) {
+        System.out.println(e.getMessage());
+}
+
+
+
+  You should probably be looking to the configuration that controls the underlying platform TLS implementation via -Djdk.tls.client.protocols=TLSv1.2
+  
+  There are two properties that a java application can use to specify the TLS version of the SSL handshake.
+
+jdk.tls.client.protocols="TLSv1.2" 
+and
+https.protocols="TLSv1.2" 
+
+Specifying simply jdk.tls.client.protocols="TLSv1.2" will cause any type of ClientHello to use TLSv1.2 (https included). The https.protocols is only
+valid if the Client Application us using HttpsURLConnection class or URL.openStream() operations.
+
+The value "TLSv1.2" is case sensitive. It is very important the 'v' is lowercase.
+
+
+
+Property	
+Description
+
+jdk.tls.client.protocols	
+Controls the underlying platform TLS implementation . Additional information is available in the JSSE Reference Guide.
+
+Example: -Djdk.tls.client.protocols=TLSv1.1,TLSv1.2
+
+Available in all JDK 8 releases, or after Java 7 update 95 (January 2016) and Java 6 update 121 (July 2016). 
+
+https.protocols	
+Controls the protocol version used by Java clients which obtain https connections through use of the HttpsURLConnection class or via URL.openStream() operations. For older versions, this can update the default in case your Java 7 client wants to use TLS 1.2 as its default.
+
+Example: -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2
+
+
+
+The properties can be included in the SystemDefault.properties for the user.dir (typically /home/userid/SystemDefault.properties) for the JVM, or 
+globally with /QIBM/UserData/Java400/SystemDefault.properties. The properties MUST be entirely left justified or they will not be picked up 
+
+Example 
+************Beginning of data************** 
+#AllowOptions 
+jdk.tls.client.protocols="TLSv1.2" 
+https.protocols="TLSv1.2" 
+************End of Data******************** 
+
+
+If these properties are included in a generic JVM argument, they need to include the '-D' 
+
+Example: java -Djdk.tls.client.protocols="TLSv1.2" ClassName 
+or 
+java -Dhttps.protocols="TLSv1.2" ClassName
+To aid in determining what TLS version is being used in the handshake, the debug details can be found with property -Djavax.net.debug=ssl:handshake:verbose
+
+or -Djavax.net.debug=all. The ClientHello event will show which version is in use.
+
+Here is an example:
+
+java -Djdk.tls.client.protocols=TLSv1.2 -Djavax.net.debug=ssl:handshake:verbose HttpsClient https://www.google.com | grep "ClientHello" 
+IBMJSSE2 to send SCSV Cipher Suite on initial ClientHello 
+*** ClientHello, TLSv1.2 
+Cross reference information
+Segment	Product	Component	Platform	Version	Edition
+Operating System	IBM i 7.3				
+Operating System	IBM i 7.2				
+Operating System	IBM i 7.1
