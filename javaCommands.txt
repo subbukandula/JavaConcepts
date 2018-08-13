@@ -10,6 +10,10 @@ javap -verbose MyClass | findstr "major"  --> to find major version/minor versio
 Default Heap Sizes of JDK
 java -XX:+PrintFlagsFinal -version  | findstr "InitialHeapSize"  or "MaxHeapSize"
 
+jconsole.exe:
+JConsole is a graphical monitoring tool to monitor Java Virtual Machine (JVM) and Java applications both on a local or remote machine.
+JConsole uses underlying features of Java Virtual Machine to provide information on performance and resource consumption of applications running on the Java platform using Java Management Extensions (JMX) technology. JConsole comes as part of Java Development Kit (JDK) and the graphical console can be started using "jconsole" command.
+
 Java Versions:
 ============
 Java 1.2 uses major version 46
