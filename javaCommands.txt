@@ -14,6 +14,8 @@ jconsole.exe:
 JConsole is a graphical monitoring tool to monitor Java Virtual Machine (JVM) and Java applications both on a local or remote machine.
 JConsole uses underlying features of Java Virtual Machine to provide information on performance and resource consumption of applications running on the Java platform using Java Management Extensions (JMX) technology. JConsole comes as part of Java Development Kit (JDK) and the graphical console can be started using "jconsole" command.
 
+Java VisualVM is useful to Java application developers to troubleshoot applications and to monitor and improve the applications' performance. Java VisualVM enables developers to generate and analyze heap dumps, track down memory leaks, perform and monitor garbage collection, and perform lightweight memory and CPU profiling.
+
 Java Versions:
 ============
 Java 1.2 uses major version 46
