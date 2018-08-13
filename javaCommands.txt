@@ -1,0 +1,3 @@
+Extract War file
+jar -xvf yourWARfileName.war
+
