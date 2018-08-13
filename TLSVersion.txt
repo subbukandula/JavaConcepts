@@ -1,9 +1,25 @@
+Transport Level Security (TLS) is designed to encrypt conversations between two parties and ensure that others can neither read nor modify the conversation. When combined with Certificate Authorities, a proper level of trust is established: we know who is on the other end of the conversation and that conversation is protected from eavesdropping/modification.
+
+JDK 8 (March 2014 to present)
+  TLSv1.2 (default), TLSv1.1, TLSv1, SSLv3
+JDK 7 (July 2011 to present)
+  TLSv1.2, TLSv1.1, TLSv1 (default), SSLv3
+JDK 6 (2006 to end of public updates 2013)
+  TLS v1.1 (JDK 6 update 111 and above), TLSv1 (default), SSLv3
+  
+There are two properties that a java application can use to specify the TLS version of the SSL handshake.
+jdk.tls.client.protocols="TLSv1.2" 
+and
+https.protocols="TLSv1.2" 
+Specifying simply jdk.tls.client.protocols="TLSv1.2" will cause any type of ClientHello to use TLSv1.2 (https included). The https.protocols is only valid if the Client Application us using HttpsURLConnection class or URL.openStream() operations.
+
+
 SSLContext sslcontext=SSLContext.getInstance("TLSv1.2");  
 sslcontext.init(null,null,null);
 SSLContext.setDefault(sslcontext);
 
   
-   -Djavax.net.debug=all 
+   -Djavax.net.debug=all or -Djavax.net.debug=ssl:handshake:verbose
    
    JAVACMD="$JAVACMD -Ddeployment.security.SSLv2Hello=false -Ddeployment.security.SSLv3=false -Ddeployment.security.TLSv1=false -D\ deployment.security.TLSv1.1=true -Ddeployment.security.TLSv1.2=true"
    
