@@ -1,0 +1,5 @@
+Passphrase-based encryption
+X.509 certificate-based encryption
+Encrypting structured data
+Using digital signatures
+
