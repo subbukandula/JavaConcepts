@@ -3,6 +3,11 @@ find /mnt -type f -name "*.jpg" -newermt "2014-12-14 01:00:00" ! -newermt "2014-
 
 find /path -newermt "2018-09-27" ! -newermt "2018-09-28"
 
+#!/bin/bash
+for i in $(find Your_Mail_Dir/ -newermt "2011-01-01" ! -newermt "2011-12-31"); do
+  mv $i /moved_emails_dir/
+done
+
 find . -mtime -90 -exec cp {} targetdir \;  (3 months copy)
 
 for i in `ls -lrt | grep "jul" | awk '{print $9}' `; do cp $i* /some/folder/; done
