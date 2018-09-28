@@ -1,5 +1,8 @@
 find /mnt -type f -name "*.jpg" -newermt "2014-12-14 01:00:00" ! -newermt "2014-12-14 02:00:00" -exec cp -pf {} /home/pi/box/pictures/ \;
 
+
+find /path -newermt "2018-09-27" ! -newermt "2018-09-28"
+
 find . -mtime -90 -exec cp {} targetdir \;  (3 months copy)
 
 for i in `ls -lrt | grep "jul" | awk '{print $9}' `; do cp $i* /some/folder/; done
