@@ -4,6 +4,8 @@ find /mnt -type f -name "*.jpg" -newermt "2014-12-14 01:00:00" ! -newermt "2014-
 
 find /my/directory -name '*.jpg' -mtime -15s -mtime +2s
 
+find /home -iname ".c" -mtime -2 -mtime +4
+
 find /path -newermt "2018-09-27" ! -newermt "2018-09-28"
 
 #!/bin/bash
