@@ -2,6 +2,8 @@ find /mnt -type f -name "*.jpg" -newermt "2014-12-14 01:00:00" ! -newermt "2014-
 
 -type f" option to tell find to locate only normal files, and ignore directories, links, and other filesystem objects.
 
+find /my/directory -name '*.jpg' -mtime -15s -mtime +2s
+
 find /path -newermt "2018-09-27" ! -newermt "2018-09-28"
 
 #!/bin/bash
