@@ -1,5 +1,6 @@
 find /mnt -type f -name "*.jpg" -newermt "2014-12-14 01:00:00" ! -newermt "2014-12-14 02:00:00" -exec cp -pf {} /home/pi/box/pictures/ \;
 
+-type f" option to tell find to locate only normal files, and ignore directories, links, and other filesystem objects.
 
 find /path -newermt "2018-09-27" ! -newermt "2018-09-28"
 
