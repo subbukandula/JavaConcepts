@@ -19,3 +19,33 @@ for i in `ls -lrt | grep "jul" | awk '{print $9}' `; do cp $i* /some/folder/; do
 
 cp  `find . -type f -newermt '18 sep 2016 20:05:00'` FOLDER
 
+=============================================================================================================
+
+Copying files with spaces
+
+OIFS="$IFS"
+IFS=$'\n'
+for file in `find . -type f -name "*.csv"`  
+do
+     echo "file = $file"
+     diff "$file" "/some/other/path/$file"
+     read line
+done
+IFS="$OIFS"
+
+find . -type f -name "*.csv" -print0 | while IFS= read -r -d '' file; do
+    echo "file = $file"
+    diff "$file" "/some/other/path/$file"
+    read line </dev/tty
+done
+
+find . -type f -name '*.csv' -exec sh -c '
+  file="$0"
+  echo "$file"
+  diff "$file" "/some/other/path/$file"
+  read line </dev/tty
+' {} ';'
+
+IFS=" \t\n"
+export $IFS
+
