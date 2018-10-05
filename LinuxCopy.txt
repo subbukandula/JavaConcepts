@@ -1,5 +1,16 @@
 find /mnt -type f -name "*.jpg" -newermt "2014-12-14 01:00:00" ! -newermt "2014-12-14 02:00:00" -exec cp -pf {} /home/pi/box/pictures/ \;
 
+
+Change to the directory in which you want to install. Type:
+cd directory_path_name
+For example, to install the software in the /usr/java/ directory, Type:
+cd /usr/java/
+
+Move the .tar.gz archive binary to the current directory.
+Unpack the tarball and install Java
+tar zxvf jre-8u73-linux-x64.tar.gz
+
+
 -type f" option to tell find to locate only normal files, and ignore directories, links, and other filesystem objects.
 
 find /my/directory -name '*.jpg' -mtime -15s -mtime +2s
