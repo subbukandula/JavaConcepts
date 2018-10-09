@@ -1,5 +1,10 @@
 find /mnt -type f -name "*.jpg" -newermt "2014-12-14 01:00:00" ! -newermt "2014-12-14 02:00:00" -exec cp -pf {} /home/pi/box/pictures/ \;
 
+echo "/home/subbukandula/data/abc def.txt" | awk -F'[/]' '{print $(NF)}'
+
+$ echo "abc_asdfjhdsf_dfksfj_12345678.csv" | awk -F'[_.]' '{print $4}'
+12345678
+It sets the Field seperator as _ or .. Then printing the column number 4 will give you the desired result (you may also prefer $(NF-1) (the but-last field) instead of $4).
 
 Change to the directory in which you want to install. Type:
 cd directory_path_name
