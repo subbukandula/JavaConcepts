@@ -71,3 +71,85 @@ find . -type f -name '*.csv' -exec sh -c '
 IFS=" \t\n"
 export $IFS
 
+
+1. sudo!! : Forgot to run a command with sudo? You need not re-write the whole command, just type “sudo!!” and the last command will run with sudo.
+2. Python -m SimpleHTTPServer : Creates a simple web page for the current working directory over port 8000.
+3. mtr : A command which is a combination of ‘ping’ and ‘traceroute’ command.
+4. Ctrl+x+e : This key combination fires up, an editor in the terminal, instantaneously.
+5. nl : Outputs the content of text file with lines Numbered.
+6. shuf : Randomly selects line/file/folder from a file/folder.
+7. ss : Outputs Socket Statistics.
+8. Last: Want to know history of last logged in users? This command comes to rescue here.
+9. curl ifconfig.me : Shows machine’s external IP Address.
+10. tree : Prints files and folders in tree like fashion, recursively.
+11. Pstree : Prints running processes with child processes, recursively.
+11 Lesser Known Useful Linux Commands – Part I
+
+The great response, received on this article, and requests to provide another list of ‘Lesser Known Linux Commands‘, from our readers, we wrote next article of the series is:
+
+10 Lesser Known Commands – Part II
+This article again was warm welcomed. The summary of the article, below is enough to describe this.
+
+12. <space> command : A space before a bash command, is not recorded in history.
+13. stat : Shows the status information of a file as well as of a file system.
+14. <alt>. And <esc>. : A tweak which put the last command argument at prompt, in the order of last entered command, appearing first.
+15. Pv : outputs simulating text, similar to hollywood movies.
+16. Mount | column -t : Lists mounted file system, in nice formatting with specification.
+17. Ctrl + l: clear shell prompt, instantaneously.
+18. curl -u gmail_id –silent “https://mail.google.com/mail/feed/atom” | perl -ne ‘print “\t” if //; print “$2\n” if /(.*)/;’. This simple scripts, opens up, unread mail of an user, in the terminal itself.
+19. screen : Detach and Reattach, long running process from a session.
+20. file : Outputs information, regarding types of file.
+21. id : Print User and Group Id.
+10 Lesser Known Linux Commands – Part 2
+
+Getting over 600 Likes on different social Networking sites and many thankful comments, we were ready with our third article of the series is:
+
+10 Lesser Known Commands – Part 3
+This article summaries as below:
+
+22. ^foo^bar : Run last command with modification, without the need of rewriting the whole command again.
+23. > file.txt : Flush the content of a text file, in a single go, from the command prompt.
+24. at : Run a particular command, time based.
+25. du -h –max-depth=1 Command : Outputs the size of all the files and folders within current folder, in human readable format.
+26. expr : Solve simple mathematical calculations from the terminal.
+27. look: Check for an English word, from the dictionary, in case of confusion, right from the shell.
+28. yes : continues to print a sting, till interrupt instruction is given.
+29. factor: Gives all the possible factors of a decimal number.
+30. ping -i 60 -a IP_address : Pings the provided IP_address, and gives audible sound when host comes alive.
+31. tac : Prints content of a file, in reverse order.
+10 Lesser Known Commands for Linux – Part 3
+
+Our Hard-work was paid by the response we received and fourth article of the series was:
+
+10 Lesser Known Linux Commands – Part IV
+Need not say, again this article was appreciated. The article summarises below:
+
+32. strace : A debugging tool.
+33. disown -a && exit Command : Run a command in background, even after terminal session is closed.
+34. getconf LONG_BIT Command : Output Machine Architecture, very clearly.
+35. while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done & : The script outputs date and time on the top right corner of shell/ terminal.
+36. convert : converts the output of a command in picture, automatically.
+37. watch -t -n1 “date +%T|figlet” : Show animated digital clock at the prompt.
+38. host and dig : DNS lookup utility.
+39. dstat : Generates statistics regarding system resource.
+40. bind -p : Shows all the shortcuts available in Bash.
+41. Touch /forcefsck : Force file-system check on next boot.
+10 Lesser Known Effective Linux Commands – Part IV
+
+10 Lesser Known Linux Commands- Part V
+The commands from here was getting biased towards scripts, yes single line powerful shell scripts and we thought to provide at least one more article on this series.
+
+42. lsb_release : Prints distribution specification information.
+43. nc -ZV localhost port_number : Check if a specific port is open or not.
+44. curl ipinfo.io : Outputs Geographical Information, regarding an ip_address.
+45. find .-user xyz : Lists all file owned by user ‘xyz’
+46. apt-get build-dep package_name: Build all the dependency, automatically while installing any specific package.
+47. lsof -iTCP:80 -sTCP:LISTEN. The script, outputs all the service/process using port 80.
+48. find -size +100M : This command combination, Lists all the files/folders the size of which is 100M or more.
+49. pdftk : A nice way to concatenate a lot of pdf files, into one.
+50. ps -LF -u user_name : Outputs Processes and Threads of a user.
+51. Startx — :1 (This command creates another new X session).
+10 Lesser Known Useful Linux Commands- Part V
+
+That’s all for now. Don’t forget to give us your valuable feedback in our comment section. This is not an end of lesser known Linux commands, and we will keep them bringing to you, from time to time, in our articles. I’ll be coming with another article, very interesting and useful for our readers. Till then sta
+
