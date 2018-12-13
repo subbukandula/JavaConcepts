@@ -1,0 +1,25 @@
+
+
+Calendar now = Calendar.getInstance();
+
+ int hour = now.get(Calendar.HOUR_OF_DAY); // Get hour in 24 hour format
+ int minute = now.get(Calendar.MINUTE);
+
+ Date date = parseDate(hour + ":" + minute);
+ Date dateCompareOne = parseDate("08:00");
+ Date dateCompareTwo = parseDate("20:00");
+
+ if (dateCompareOne.before( date ) && dateCompareTwo.after(date)) {
+    //your logic
+ }
+
+ private Date parseDate(String date) {
+
+    final String inputFormat = "HH:mm";
+    SimpleDateFormat inputParser = new SimpleDateFormat(inputFormat, Locale.US);
+    try {
+         return inputParser.parse(date);
+    } catch (java.text.ParseException e) {
+         return new Date(0);
+    }
+ }
