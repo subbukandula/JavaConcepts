@@ -31,3 +31,24 @@ email.append("<html><body>"
         email.append("</table></body></html>");
         sm.populateMailMessage(email.toString());
         sm.sendMail();
+        
+      
+      
+      p>Hi All,</p>
+<p>PFB table for PROD and DR comparions in ANSR.</p>
+<table style="height: 34px; width: 539px;">
+<tbody>
+<tr>
+<td style="width: 135px;">Table Name</td>
+<td style="width: 120px;">PROD Count</td>
+<td style="width: 129px;">DR Count</td>
+<td style="width: 145px;">Difference</td>
+</tr>
+<tr>
+<td style="width: 135px;">&nbsp;</td>
+<td style="width: 120px;">&nbsp;</td>
+<td style="width: 129px;">&nbsp;</td>
+<td style="width: 145px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
