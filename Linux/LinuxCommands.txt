@@ -3,6 +3,10 @@ Setting JavaPath
 export JAVA_HOME="path that you found"
 export PATH=$JAVA_HOME/bin:$PATH
 
+for i in $(find Your_Mail_Dir/ -newermt "2011-01-01" ! -newermt "2011-12-31"); do
+  mv $i /moved_emails_dir/
+done
+
 find /mnt -type f -name "*.jpg" -newermt "2014-12-14 01:00:00" ! -newermt "2014-12-14 02:00:00" -exec cp -pf {} /home/pi/box/pictures/ \;
 
 find ~/tmp/ -type f  | awk -F/ '{ print $NF }'
@@ -77,7 +81,7 @@ IFS=" \t\n"
 export $IFS
 
 
-1. sudo!! : Forgot to run a command with sudo? You need not re-write the whole command, just type “sudo!!” and the last command will run with sudo.
+1. sudo!! : Forgot to run a command with sudo? You need not re-write the whole command, just type sudo and the last command will run with sudo.
 2. Python -m SimpleHTTPServer : Creates a simple web page for the current working directory over port 8000.
 3. mtr : A command which is a combination of ‘ping’ and ‘traceroute’ command.
 4. Ctrl+x+e : This key combination fires up, an editor in the terminal, instantaneously.
@@ -101,7 +105,6 @@ This article again was warm welcomed. The summary of the article, below is enoug
 15. Pv : outputs simulating text, similar to hollywood movies.
 16. Mount | column -t : Lists mounted file system, in nice formatting with specification.
 17. Ctrl + l: clear shell prompt, instantaneously.
-18. curl -u gmail_id –silent “https://mail.google.com/mail/feed/atom” | perl -ne ‘print “\t” if //; print “$2\n” if /(.*)/;’. This simple scripts, opens up, unread mail of an user, in the terminal itself.
 19. screen : Detach and Reattach, long running process from a session.
 20. file : Outputs information, regarding types of file.
 21. id : Print User and Group Id.
@@ -134,7 +137,6 @@ Need not say, again this article was appreciated. The article summarises below:
 34. getconf LONG_BIT Command : Output Machine Architecture, very clearly.
 35. while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done & : The script outputs date and time on the top right corner of shell/ terminal.
 36. convert : converts the output of a command in picture, automatically.
-37. watch -t -n1 “date +%T|figlet” : Show animated digital clock at the prompt.
 38. host and dig : DNS lookup utility.
 39. dstat : Generates statistics regarding system resource.
 40. bind -p : Shows all the shortcuts available in Bash.
