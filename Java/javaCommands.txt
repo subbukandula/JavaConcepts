@@ -1,3 +1,6 @@
+Build the jar file.
+jar -cmf manifest.mf hello.jar start
+
 unpack the war file with the jar command.
 jar -xvf yourWARfileName.war
 

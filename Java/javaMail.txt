@@ -1,0 +1,154 @@
+
+// File Name SendEmail.java
+
+import java.util.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+import javax.activation.*;
+
+public class SendEmail {
+
+   public static void main(String [] args) {    
+      // Recipient's email ID needs to be mentioned.
+      String to = "abcd@gmail.com";
+
+      // Sender's email ID needs to be mentioned
+      String from = "web@gmail.com";
+
+      // Assuming you are sending email from localhost
+      String host = "localhost";
+
+      // Get system properties
+      Properties properties = System.getProperties();
+
+      // Setup mail server
+      properties.setProperty("mail.smtp.host", host);
+
+      // Get the default Session object.
+      Session session = Session.getDefaultInstance(properties);
+
+      try {
+         // Create a default MimeMessage object.
+         MimeMessage message = new MimeMessage(session);
+
+         // Set From: header field of the header.
+         message.setFrom(new InternetAddress(from));
+
+         // Set To: header field of the header.
+         message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+
+         // Set Subject: header field
+         message.setSubject("This is the Subject Line!");
+
+         // Now set the actual message
+         message.setText("This is actual message");
+
+         // Send message
+         Transport.send(message);
+         System.out.println("Sent message successfully....");
+      } catch (MessagingException mex) {
+         mex.printStackTrace();
+      }
+   }
+}
+
+	try {
+            Properties props = new Properties();
+            props.put("mail.smtp.host", "smtp.gmail.com");
+            props.put("mail.smtp.auth", "true");
+            props.put("mail.debug", "false");
+            props.put("mail.smtp.ssl.enable", "true");
+
+            Session session = Session.getInstance(props, new EmailAuth());
+            Message msg = new MimeMessage(session);
+
+            InternetAddress from = new InternetAddress("sendersEmailAddress", "Sender's name");
+            msg.setFrom(from);
+
+            InternetAddress toAddress = new InternetAddress("Receiver's email");
+
+            msg.setRecipient(Message.RecipientType.TO, toAddress);
+
+            msg.setSubject("Test");
+            msg.setContent(msg.setContent("<html>\n" +
+                    "<body>\n" +
+                    "\n" +
+                    "<a href=\"http://pushpalankajaya.blogspot.com\">\n" +
+                    "This is a link</a>\n" +
+                    "\n" +
+                    "</body>\n" +
+                    "</html>", "text/html");, "text/html");
+            Transport.send(msg);
+        } catch (UnsupportedEncodingException ex) {
+            ex.printStackTrace();
+
+        } catch (MessagingException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    static class EmailAuth extends Authenticator {
+
+        @Override
+        protected PasswordAuthentication getPasswordAuthentication() {
+
+            return new PasswordAuthentication("sendersEmailAddress", "password");
+
+        }
+    }
+
+
+
+email.append("<html><body>"
+                    + "<table style='border:2px solid black'>");
+
+        update.setString(1, "Outstanding");
+        ResultSet results = update.executeQuery();
+
+        while (results.next()) {
+            System.out.println("in results...");
+            email.append("<tr bgcolor=\"#33CC99\">");
+            email.append("<td>");
+            long period = results.getLong("period_to");
+            email.append(DateConvert.fromEpoch(period));
+            email.append("</td>");
+
+            email.append("<td>");
+            email.append(results.getString("type"));
+            email.append("</td>");
+
+            email.append("<td>");
+            email.append(results.getString("amt"));
+            email.append("</td>");
+
+            email.append("<td>");
+            email.append(results.getString("status"));
+            email.append("</td>");
+
+            email.append("<tr>");
+        }
+
+        email.append("</table></body></html>");
+        sm.populateMailMessage(email.toString());
+        sm.sendMail();
+        
+      
+      
+      p>Hi All,</p>
+<p>PFB table for PROD and DR comparions in ANSR.</p>
+<table style="height: 34px; width: 539px;">
+<tbody>
+<tr>
+<td style="width: 135px;">Table Name</td>
+<td style="width: 120px;">PROD Count</td>
+<td style="width: 129px;">DR Count</td>
+<td style="width: 145px;">Difference</td>
+</tr>
+<tr>
+<td style="width: 135px;">&nbsp;</td>
+<td style="width: 120px;">&nbsp;</td>
+<td style="width: 129px;">&nbsp;</td>
+<td style="width: 145px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
