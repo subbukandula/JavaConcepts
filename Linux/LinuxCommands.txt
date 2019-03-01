@@ -3,6 +3,8 @@ Setting JavaPath
 export JAVA_HOME="path that you found"
 export PATH=$JAVA_HOME/bin:$PATH
 
+print "aaaaa" | nawk -v lpar=$(hostname) -v tdate="`date`" -f testawk4.awk
+
 for i in $(find Your_Mail_Dir/ -newermt "2011-01-01" ! -newermt "2011-12-31"); do
   mv $i /moved_emails_dir/
 done
