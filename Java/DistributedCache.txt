@@ -1,0 +1,36 @@
+Cache:
+Store of things that will be required in the future, and can be retrieved rapidly.
+Usually a Map(key/value) with capacity control(via eviction) and freshness control(via expiry)
+
+Cache Usage
+HitRatio(hits/second)
+
+https://docs.oracle.com/cd/E24290_01/coh.371/e22837/cache_intro.htm#COHDG320
+
+Ehcache:
+The Ehcache API is used in the following topologies:
+    Standalone – The cached data set is held in the application node. Any other application nodes are independent with no communication between them. If standalone caching is being used where there are multiple application nodes running the same application, then there is Weak Consistency between them. They contain consistent values for immutable data or after the time to live on an Element has completed and the Element needs to be reloaded. Standalone nodes can be run with open-source Ehcache or, to add off-heap memory and other features, with BigMemory Go.
+    Distributed – The data is held in a Terracotta Server Array with a subset of recently used data held in each application cache node. The distributed topology, available with BigMemory Max, supports a very rich set of consistency modes.
+    Replicated – The cached data set is held in each application node and data is copied or invalidated across the cluster without locking. Replication can be either asynchronous or synchronous, where the writing thread blocks while propagation occurs. The only consistency mode available in this topology is Weak Consistency. nodes can be run with open-source Ehcache.
+
+Cache Drift/Database Bottlenecks
+
+Teracotta Server Array:
+	Distributed caching enabling data sharing among multiple CacheManagers and their caches in multiple JVMs
+
+JCache(Java caching)
+	Standard caching API for Java(javax.cache.cache-api
+
+JCache is implemented by various caching solutions:
+    JCache Reference Implementation
+    Hazelcast
+    Oracle Coherence
+    Terracotta Ehcache
+    Infinispan
+
+(https://www.baeldung.com/jcache)	
+
+Latency and timeouts
+Redis framework(Redisson): help us to build distributed cache for our application (Maps, Spring Cache, JCache)
+
+
