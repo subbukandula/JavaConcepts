@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infinispan xmlns="urn:infinispan:config:7.2">
+
+	<cache-container default-cache="default">
+		<local-cache name="customer">
+		</local-cache>
+	</cache-container>
+	
+</infinispan>
