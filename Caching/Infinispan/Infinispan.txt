@@ -1,2 +1,36 @@
 Github links
 https://github.com/infinispan/infinispan-embedded-tutorial
+
+
+https://dzone.com/refcardz/getting-started-infinispan
+
+Distributed Cache:
+
+<dependency>
+  <groupId>org.infinispan</groupId>
+  <artifactId>infinispan-core</artifactId>
+  <version>LATEST_INFINISPAN_VERSION</version>
+</dependency>
+
+
+
+DefaultCacheManager m = new DefaultCacheManager("path/to/my/infinispan_config.xml");
+Cache<String, String> c = m.getCache();
+
+infinispam_config.xml
+<infinispan>
+  <cache-container default-cache="default">
+  <transport cluster="mycluster"/>
+  <distributed-cache name="default" mode="SYNC"/>
+  </cache-container>
+</infinispan>
+
+org.infinispan.manager.DefaultCacheManager
+
+
+<distributed-cache name="mortaldata">
+  <expiration lifespan="600000" /> 
+  <!-- lifespan in milliseconds -->
+</distributed-cache>
+
+
