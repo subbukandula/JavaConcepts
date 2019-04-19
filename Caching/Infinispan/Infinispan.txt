@@ -1,17 +1,19 @@
-Github links
-https://github.com/infinispan/infinispan-embedded-tutorial
-
-
-https://dzone.com/refcardz/getting-started-infinispan
-https://dzone.com/articles/infinispan-data-grid-platform
-
 Infinispan
+  - high performance cache
+  - NoSQL Database (key-value pair store)
+  - A transactional scalable data-grid suited for cloud deployments(XA)
+  - The open source project supported as "JBoss Data Grid"
+  - org.infinispan.Cache<K,V>
+  
   Standalone operation
   Clustered operation
     Invalidated data grid
     Replicated data grid
     Distributed data grid (default)
     L1 caching
+ 
+Passivation:
+When passivation is disabled, whenever an element is modified, added or removed, then that modification is persisted in the backend store via the cache loader. There is no direct relationship between eviction and cache loading. If you don't use eviction, what's in the persistent store is basically a copy of what's in memory. If you do use eviction, what's in the persistent store is basically a superset of what's in memory (i.e. it includes entries that have been evicted from memory). When passivation is enabled, there is a direct relationship between eviction and the cache loader. Writes to the persistent store via the cache loader only occur as part of the eviction process. Data is deleted from the persistent store when the application reads it back into memory. In this case, what's in memory and what's in the persistent store are two subsets of the total information set, with no intersection between the subsets
 
 <dependency>
   <groupId>org.infinispan</groupId>
@@ -41,3 +43,8 @@ org.infinispan.manager.DefaultCacheManager
 </distributed-cache>
 
 
+References
+https://github.com/infinispan/infinispan-embedded-tutorial
+https://dzone.com/refcardz/getting-started-infinispan
+https://dzone.com/articles/infinispan-data-grid-platform
+https://docs.jboss.org/author/display/ISPN/Cache+Loaders+and+Stores
