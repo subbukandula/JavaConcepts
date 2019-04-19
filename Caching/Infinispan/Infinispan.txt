@@ -5,7 +5,13 @@ https://github.com/infinispan/infinispan-embedded-tutorial
 https://dzone.com/refcardz/getting-started-infinispan
 https://dzone.com/articles/infinispan-data-grid-platform
 
-Distributed Cache:
+Infinispan
+  Standalone operation
+  Clustered operation
+    Invalidated data grid
+    Replicated data grid
+    Distributed data grid (default)
+    L1 caching
 
 <dependency>
   <groupId>org.infinispan</groupId>
