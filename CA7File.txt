@@ -1,1 +1,2 @@
 
+You can add a trailer step to JOBA doing a DEMAND,JOB=JOBB,TIME=+5 which will bring JOBB into the queue with a SUBMIT time of 5 minutes in the future.
