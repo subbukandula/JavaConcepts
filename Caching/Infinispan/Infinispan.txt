@@ -99,3 +99,4 @@ https://github.com/infinispan/infinispan-embedded-tutorial
 https://dzone.com/refcardz/getting-started-infinispan
 https://dzone.com/articles/infinispan-data-grid-platform
 https://docs.jboss.org/author/display/ISPN/Cache+Loaders+and+Stores
+http://infinispan.org/docs/stable/getting_started/getting_started.html
