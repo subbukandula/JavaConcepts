@@ -1,3 +1,5 @@
+Infinispan --> Distributed in-memory cache, key value NoSQL store, Distributed Storage, 
+
 <?xml version="1.0" encoding="UTF-8"?>
 <infinispan>
     <cache-container ...>
