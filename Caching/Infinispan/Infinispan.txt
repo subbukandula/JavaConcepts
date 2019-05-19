@@ -94,6 +94,115 @@ Bellow is an sample configuration for the JdbcStringBasedCacheStore. For detaile
    </stringKeyedJdbcStore>
 </loaders>
 
+API
+  Map like key/value store
+  Upcoming JPA-like layer
+Consistent hash based distribution
+  Self healing
+  No single point of failure
+Highly concurrent
+  MVCC locking
+Presistence
+   not just in memory
+   write through and write behind
+   Pluggable drivers
+Eviction and expiry
+   Efficient, adaptive algorithms
+   Addresses shortcomings of LRU & FIFO
+XA Transactions
+    2-phase commit based
+    Deadlock detection algorithms
+    Coming soon: Atomic Broadcast
+Map/reduce
+     5.0.0.Alpha2 APIs
+Querying
+     Using Lucene and Hibernate Search to index
+
+
+CLient/Server Architecture
+
+	     |-Infinispan
+             |     |
+Application -|-Infinispan
+             |     |
+	     |-Infinispan
+
+Supported Protocols
+Rest, Memcached, Hot Rod
+
+Protocol: text, text, Binary
+Client Libraries: NA, Plenty, Currently in JAVA
+Clustered: yes, yes. yes
+Smart Routing: No, No, Yes
+Load Balancing/Failover: HTTP LB, only predefined server list, Dynamci
+
+Infinispan is data grid
+  In-Memory
+  P2P, distributed
+  Low-latency, fast key/value store
+No SQL database
+  Persistence
+  Map/Reduce
+Querying support
+Transactional
+
+Transparent horizontal scalability
+	Elastic in both directions
+Fast, low latency data access
+Ability to address a very large heap
+Cloud-ready database
+Not just for java
+Open Source
+
+DaaS(Data as a Source)
+
+Start infinispan server:
+bin/startServer.sh -r memcached(or)hotrod \ -c infinispan.xml
+
+REST endpoint
+	infinispan-server-rest.war (servlet container)
+	exposes HTTP endpoint for REST
+
+Map-like API
+Async API
+Consistent Hash based distribution
+Write-through, write-behind
+Eviction,expiration
+Management tooling
+REST API
+Hibernate Second level caching
+4.1.0
+Deadlock detection
+Client/Server protocals
+	Memchached, Hot Rod
+Lucene Dicectory implementation
+
+JPA-like API
+Fine-grained replication
+Distributed code execution
+	Map/reduce
+Virtual nodes for more even distribution
+in Active development
+
+
+Ickle:
+    is a light and small subset of JP-QL, hence the lovely name
+    queries Java classes and supports Protocol Buffers too
+    queries can target a single entity type
+    queries can filter on properties of embedded objects too, including collections
+    supports projections, aggregations, sorting, named parameters
+    supports indexed and non-indexed execution
+    supports complex boolean expressions
+    does not support computations in expressions (eg. user.age > sqrt(user.shoeSize + 3) is not allowed but user.age >= 18 is fine)
+    does not support joins
+        but, navigations along embedded entities are implicit joins and are allowed
+        joining on embedded collections is allowed
+        other join types not supported
+    subqueries are not supported
+    besides the normal relational operators it offers full-text operators, similar to Lucene’s  query parser
+    is now supported across various Infinispan APIs, wherever a Query produced by the QueryBuilder is accepted (even for continuous queries or in event filters for listeners!)
+
+
 References
 https://github.com/infinispan/infinispan-embedded-tutorial
 https://dzone.com/refcardz/getting-started-infinispan
