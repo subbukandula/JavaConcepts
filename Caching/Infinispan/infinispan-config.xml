@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infinispan>
+    <cache-container ...>
+        <!-- if you need to persist counter (i.e. the counter's value survive cluster restarts), global state needs to be configured -->
+        <global-state>
+            ...
+        </global-state>
+        <!-- your caches configuration goes here -->
+         <counters xmlns="urn:infinispan:config:counters:9.1" num-owners="2" reliability="AVAILABLE"/>
+    </cache-container>
+</infinispan>
