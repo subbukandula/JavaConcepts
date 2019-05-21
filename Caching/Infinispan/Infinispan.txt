@@ -202,6 +202,7 @@ Ickle:
     besides the normal relational operators it offers full-text operators, similar to Lucene’s  query parser
     is now supported across various Infinispan APIs, wherever a Query produced by the QueryBuilder is accepted (even for continuous queries or in event filters for listeners!)
 
+git clone https://github.com/infinispan/infinispan-embedded-tutorial.git
 
 References
 https://github.com/infinispan/infinispan-embedded-tutorial
