@@ -28,6 +28,50 @@ global.transport().clusterName("WeatherApp");
 cacheManager = new DefaultCacheManager(global.build());
 
 
+
+Implementing custom CachedRowSet could be painful since you have implement to all methods exposed by ResultSet interface.
+
+I'd recommend not to cache on jdbc level but cache some value objects on data access layer instead.
+
+For example if you user table with id, name and email columns you can have following value object
+
+class User {
+    Long id;
+    String name;
+    String email;
+} 
+
+next you can introduce data access layer
+
+interface UserRepository {
+    List<User> retrieveUsers();
+}
+
+with default JdbcUserRepository which loads data from the database.
+
+Caching could be implemented using proxy pattern:
+
+class CachingUserRepository implements UserRepository {
+    private Cache cache;
+    private UserRepository delegate;
+
+    List<User> retrieveUsers() {
+        List<User> result = cache.get(USERS_KEY);
+        if (result == null) {
+            result = delegate.retrieveUsers();
+        }
+
+        return result;
+    }
+
+}
+
+Implementing the cache is the most challenging part. You have to worry about:
+
+    Concurrency - several threads will be accessing the cache
+    Memory - cache could become too big and there might occur OutOfMemoryException
+
+
 LocationWeather weather = cache.get(location);
 if (weather == null) {
   weather = fetchWeather(location);
@@ -36,7 +80,55 @@ if (weather == null) {
 return weather;
 
 
+==========================================================================================================
+<properties>
+	<infinispan.version>7.2.5.Final</infinispan.version>
+</properties>
 
+<dependencies>
+	<dependency>
+		<groupId>org.infinispan</groupId>
+		<artifactId>infinispan-embedded</artifactId>
+		<version>${infinispan.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.infinispan</groupId>
+		<artifactId>infinispan-embedded-query</artifactId>
+		<version>${infinispan.version}</version>
+	</dependency>
+</dependencies>
+        
+private Cache<Object, Object> createCache() throws IOException {
+    System.setProperty("nodeName", nodeName);
+    EmbeddedCacheManager cacheManager = new DefaultCacheManager("infinispan.xml");
+    Cache<Object, Object> cache = cacheManager.getCache("repl");
+    LOGGER.info(String.format("Started cache %s on node %s with members: %s", "dist", nodeName, cache.getAdvancedCache().getRpcManager().getMembers()));
+    return cache;
+}
+        
+for (int i = 0; i < 500000; i++) {
+    Person person = new Person(dataFactory.getNextFirstName(), dataFactory.getNextLastName());
+    person.addAddress(new Address(dataFactory.getNextCity()));
+    cache.put(nodeName + "-" + i, person);
+}
+                           
+QueryFactory queryFactory = Search.getQueryFactory(cache);
+Query query = queryFactory.from(Person.class).
+        having("firstName").eq(dataFactory.getNextFirstName()).
+        and().
+        having("lastName").eq(dataFactory.getNextLastName()).
+        and().
+        having("addresses.city").eq(dataFactory.getNextCity()).
+        toBuilder().build();
+List<Object> list = query.list();
+        
+<distributed-cache name="dist" owners="1" segments="2"/>
+        
+<cache-container default-cache="default">
+    <transport stack="udp" node-name="${nodeName}" />
+    <replicated-cache name="repl" mode="SYNC" />
+</cache-container>
+        
 
 
 References:
