@@ -12,6 +12,20 @@ Infinispan --> Distributed in-memory cache, key value NoSQL store, Distributed S
     </cache-container>
 </infinispan>
 
+Infinispan 9.4.0 final version:
+=======================================================
+<dependency>
+  <groupId>org.infinispan</groupId>
+  <artifactId>infinispan-core</artifactId>
+  <version>9.4.0.Final</version>
+</dependency>
+
+EmbeddedCacheManager cacheManager = new DefaultCacheManager();
+cacheManager.stop();
+
+GlobalConfigurationBuilder global = GlobalConfigurationBuilder.defaultClusteredBuilder();
+global.transport().clusterName("WeatherApp");
+cacheManager = new DefaultCacheManager(global.build());
 
 
 LocationWeather weather = cache.get(location);
@@ -20,3 +34,10 @@ if (weather == null) {
   cache.put(location, weather);
 }
 return weather;
+
+
+
+
+
+References:
+https://infinispan.org/tutorials/embedded/step-1/
