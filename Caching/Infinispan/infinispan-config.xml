@@ -11,3 +11,12 @@ Infinispan --> Distributed in-memory cache, key value NoSQL store, Distributed S
          <counters xmlns="urn:infinispan:config:counters:9.1" num-owners="2" reliability="AVAILABLE"/>
     </cache-container>
 </infinispan>
+
+
+
+LocationWeather weather = cache.get(location);
+if (weather == null) {
+  weather = fetchWeather(location);
+  cache.put(location, weather);
+}
+return weather;
