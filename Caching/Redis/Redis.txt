@@ -1,1 +1,16 @@
 compile 'redis.clients:jedis:2.7.0'
+
+Redis
+ - open source in-memory data structure store that uses RAM for storing data
+ - We can store high-level data structures such as lists, sets, hashes as well as Bitmaps and Bitfields
+ - Redis data is stored primarly in server's main memory
+ - both read and write operations are very fast
+ - Redis can used a datasource, cache and a message broker wherever performance is key
+ 
+ Possible frameworks
+ 	Lettuce.io(https://lettuce.io/)
+ 		Lettuce, on the other hand, is built on netty (https://netty.io/) and connection instances can be shared across multiple threads. So a multi-threaded application 
+ 		can use a single connection regardless the number of concurrent threads that interact with Lettuce.
+ 	Jedis(https://github.com/redisson/redisson)
+		Jedis is easy to use and supports a vast number of Redis features, it is not thread safe and needs connection pooling 
+		to work in a multi-threaded environment. Connection pooling comes at the cost of a physical connection per Jedis instance which increases the number of Redis connections.

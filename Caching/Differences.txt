@@ -1,0 +1,3 @@
+			Infinispan					Redis
+Data Store	Key-Value Pair Store		high-level data structures such as lists, sets, hashes as well as Bitmaps and Bitfields
+
