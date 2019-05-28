@@ -1,5 +1,10 @@
 compile 'redis.clients:jedis:2.7.0'
 
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-redis</artifactId>
+</dependency>
+
 Redis
  - open source in-memory data structure store that uses RAM for storing data
  - We can store high-level data structures such as lists, sets, hashes as well as Bitmaps and Bitfields
@@ -14,3 +19,19 @@ Redis
  	Jedis(https://github.com/redisson/redisson)
 		Jedis is easy to use and supports a vast number of Redis features, it is not thread safe and needs connection pooling 
 		to work in a multi-threaded environment. Connection pooling comes at the cost of a physical connection per Jedis instance which increases the number of Redis connections.
+		
+		
+		
+https://dzone.com/articles/intro-to-redis-with-spring-boot
+@Bean
+JedisConnectionFactory jedisConnectionFactory() {
+    return new JedisConnectionFactory();
+}
+
+@Bean
+public RedisTemplate<String, Object> redisTemplate() {
+    final RedisTemplate<String, Object> template = new RedisTemplate<String, Object>();
+    template.setConnectionFactory(jedisConnectionFactory());
+    template.setValueSerializer(new GenericToStringSerializer<Object>(Object.class));
+    return template;
+}
