@@ -1,0 +1,37 @@
+@Cacheable(value="bookCache", 
+  key="{ #root.methodName, #isbn?.id, #checkWarehouse }")
+public Book findBook(ISBN isbn, boolean checkWarehouse) 
+...
+
+@Cacheable(value="bookCache", 
+  key="{ #root.methodName, #asin, #checkWarehouse }")
+public Book findBookByAmazonId(String asin, boolean checkWarehouse)
+...
+
+
+<cache:annotation-driven mode="..." key-generator="cacheKeyGenerator" />
+<bean id="cacheKeyGenerator" class="net.example.cache.CacheKeyGenerator" />
+...with:
+
+public class CacheKeyGenerator 
+  implements org.springframework.cache.interceptor.KeyGenerator {
+
+    @Override
+    public Object generate(final Object target, final Method method, 
+      final Object... params) {
+
+        final List<Object> key = new ArrayList<>();
+        key.add(method.getDeclaringClass().getName());
+        key.add(method.getName());
+
+        for (final Object o : params) {
+            key.add(o);
+        }
+        return key;
+    }
+}
+
+@Cacheable(value="bookCache", key="T(java.util.Objects)
+@Cacheable(value="bookCache", key="#checkwarehouse.toString().append(#isbn.toString())"
+
+
