@@ -184,6 +184,30 @@ Distributed code execution
 Virtual nodes for more even distribution
 in Active development
 
+================================================================================================
+Infinispan-server-9.4.14.Final.zip
+
+zip two times  (-1 and -2)
+
+bin
+1) add users
+
+2) clustered.cmd
+standalone.bat -c clustered.xml
+
+container
+container clustered
+cache
+cache rulesServices
+put a a
+get a
+
+ConfigurationBuilder builder = new ConfigurationBuilder();
+builder.addServers("localhost:11222");
+RemoteCacheManager cacheManager = new RemoteCacheManager(builder.build());
+RemoteCache<Object, Object> cache = cacheManager.getCache("default");
+system.out.println(cache.get("Name")l
+cacheManager.close();
 
 Ickle:
     is a light and small subset of JP-QL, hence the lovely name
