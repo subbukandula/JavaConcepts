@@ -209,6 +209,11 @@ RemoteCache<Object, Object> cache = cacheManager.getCache("default");
 system.out.println(cache.get("Name")l
 cacheManager.close();
 
+PROTOBUF ENCODING:
+	https://access.redhat.com/documentation/en-us/red_hat_data_grid/6.4/html/infinispan_query_guide/sect-protobuf_encoding
+	https://access.redhat.com/documentation/en-us/red_hat_data_grid/6.5/html/infinispan_query_guide/remote_querying_via_hot_rod
+	https://developers.redhat.com/quickstarts/datagrid/remote-query/
+
 Ickle:
     is a light and small subset of JP-QL, hence the lovely name
     queries Java classes and supports Protocol Buffers too
