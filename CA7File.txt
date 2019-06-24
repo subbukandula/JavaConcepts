@@ -1,2 +1,5 @@
 
 You can add a trailer step to JOBA doing a DEMAND,JOB=JOBB,TIME=+5 which will bring JOBB into the queue with a SUBMIT time of 5 minutes in the future.
+
+
+please ensure that workstation details are updated on the AST tool for us to proceed with the exit checklist closure.
