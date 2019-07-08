@@ -1,0 +1,52 @@
+https://infinispan.org/docs/8.2.x/infinispan_server_guide/infinispan_server_guide.html#_domain_mode
+
+Clustering Modes:
+	Replicated
+	Distribution
+		Distribution mode allows Infinispan to scale the cluster linearly. Distribution mode uses a consistent hash algorithm to determine where in a cluster a new node should be placed. The number of copies of information to be kept is configurable
+		Distributed caches, although deployed on a cluster of multiple nodes, offer a single logical view (and state) of the cache. In most cases, an object stored in a distributed cache cluster will reside on a single node in a distributed cache cluster. By means of a hashing algorithm, the cache engine can always determine on which node a particular key-value resides. Since there is always a single state of the cache cluster, it is never inconsistent.
+	Synchronous and Asynchronos Replication
+
+Cache Stores
+	File Based Cache Store
+	JDBC Based Cache Store
+
+
+standalone.xml
+	Security realms
+	logging
+
+infinispan SubSystem:  
+===============================================
+urn:infinispan:server:core:9.4
+	Cache Container:  clustered (A cache container is repository for the caches used by a subsystem)
+	One cache is defined as the default cache, which is the cache that will be used for clustering
+
+urn:infinispan:server:endpoint:9.4
+	Connecters:
+		hotrod connector
+		rest connector
+
+urn:infinispan:server:jgroups:9.4
+	JGroups is a messaging toolkit which allows developers to create reliable messaging applications where system reliability is an issue. JGroups can be used to create clusters whose nodes can send messages to each other. 
+	Two JGroup stacks
+		UDP (User Datagram Protocol)
+		TCP (Tranmission Control Protocol)
+
+
+
+
+domain.xml
+host.xml
+
+
+
+
+<domain-controller>  
+    <remote security-realm="ManagementRealm">  
+          <discovery-options>  
+              <static-discovery name="primary" host="172.16.81.100" port="9999"/>  
+              <static-discovery name="backup" host="172.16.81.101" port="9999"/>  
+          </discovery-options>  
+    </remote>  
+</domain-controller>
