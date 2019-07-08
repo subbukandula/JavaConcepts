@@ -1,0 +1,369 @@
+2017-01-23 20:44:39,753 INFO  [org.jboss.modules] (main) JBoss Modules version 1.5.1.Final
+2017-01-23 20:44:40,224 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2017-01-23 20:44:40,426 INFO  [org.jboss.as] (MSC service thread 1-6) WFLYSRV0049: Infinispan Server 8.2.4.Final (WildFly Core 2.0.10.Final) starting
+2017-01-23 20:44:40,430 DEBUG [org.jboss.as.config] (MSC service thread 1-6) Configured system properties:
+	[Server:server-one] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /usr/local/infinispan-server-8.2.4.Final/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/java/jre1.8.0_102/lib/endorsed
+	java.ext.dirs = /usr/java/jre1.8.0_102/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/java/jre1.8.0_102
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/jre1.8.0_102/lib/amd64/server:/usr/java/jre1.8.0_102/lib/amd64:/usr/java/jre1.8.0_102/../lib/amd64::/lib64:/usr/lib64:/usr/local/lib64:/lib:/usr/lib/gcc:/usr/local/lib:/asw/lib:/usr/local/intel:/usr/lib64/libglib-2.0.so.0.2200.5:/h/SPTasker/SPTasker/Linux64_Runtime_Libs:/ora01/app/oracle/product/11g/jdbc/lib:/usr/java/jre1.8.0_102/lib/amd64/server:/asw/asw_obsproc/obsproc/lib/c:/usr/lib/oracle/11.2/client64/lib:/lib64:/usr/lib64:/usr/local/lib64:/lib:/usr/lib/gcc:/usr/local/lib:/asw/lib:/usr/local/intel:/usr/lib64/libglib-2.0.so.0.2200.5:/h/SPTasker/SPTasker/Linux64_Runtime_Libs:/ora01/app/oracle/product/11g/jdbc/lib:/usr/java/jre1.8.0_102/lib/amd64/server:/asw/asw_obsproc/obsproc/lib/c:/usr/lib/oracle/11.2/client64/lib:/lib64:/usr/lib64:/usr/local/lib64:/lib:/usr/lib/gcc:/usr/local/lib:/asw/lib:/usr/local/intel:/usr/lib64/libglib-2.0.so.0.2200.5:/h/SPTasker/SPTasker/Linux64_Runtime_Libs:/ora01/app/oracle/product/11g/jdbc/lib:/usr/java/jre1.8.0_102/lib/amd64/server:/asw/asw_obsproc/obsproc/lib/c:/usr/lib/oracle/11.2/client64/lib:/lib64:/usr/lib64:/usr/local/lib64:/lib:/usr/lib/gcc:/usr/local/lib:/asw/lib:/usr/local/intel:/usr/lib64/libglib-2.0.so.0.2200.5:/h/SPTasker/SPTasker/Linux64_Runtime_Libs:/ora01/app/oracle/product/11g/jdbc/lib:/usr/java/jre1.8.0_102/lib/amd64/server:/asw/asw_obsproc/obsproc/lib/c:/usr/lib/oracle/11.2/client64/lib:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_102-b14
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_102
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.102-b14
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.default.jgoups.stack = tcp
+	jboss.domain.base.dir = /usr/local/infinispan-server-8.2.4.Final/domain
+	jboss.domain.config.dir = /usr/local/infinispan-server-8.2.4.Final/domain/configuration
+	jboss.home.dir = /usr/local/infinispan-server-8.2.4.Final
+	jboss.host.name = jmsbaswca1-01
+	jboss.modules.dir = /usr/local/infinispan-server-8.2.4.Final/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = host1:server-one
+	jboss.qualified.host.name = jmsbaswca1-01
+	jboss.server.base.dir = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-one
+	jboss.server.config.dir = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-one/configuration
+	jboss.server.data.dir = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-one/data
+	jboss.server.deploy.dir = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-one/data/content
+	jboss.server.log.dir = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-one/log
+	jboss.server.name = server-one
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-one/tmp
+	line.separator = 
+
+	logging.configuration = file:/usr/local/infinispan-server-8.2.4.Final/domain/configuration/default-server-logging.properties
+	module.path = /usr/local/infinispan-server-8.2.4.Final/modules
+	org.jboss.boot.log.file = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-one/log/server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 3.10.0-327.36.1.el7.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/java/jre1.8.0_102/lib/resources.jar:/usr/java/jre1.8.0_102/lib/rt.jar:/usr/java/jre1.8.0_102/lib/sunrsasign.jar:/usr/java/jre1.8.0_102/lib/jsse.jar:/usr/java/jre1.8.0_102/lib/jce.jar:/usr/java/jre1.8.0_102/lib/charsets.jar:/usr/java/jre1.8.0_102/lib/jfr.jar:/usr/java/jre1.8.0_102/classes
+	sun.boot.library.path = /usr/java/jre1.8.0_102/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /usr/local/infinispan-server-8.2.4.Final/jboss-modules.jar -mp /usr/local/infinispan-server-8.2.4.Final/modules org.jboss.as.server
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /usr/local/infinispan-server-8.2.4.Final
+	user.home = /home/ispn
+	user.language = en
+	user.name = ispn
+	user.timezone = Africa/Monrovia
+2017-01-23 20:44:40,431 DEBUG [org.jboss.as.config] (MSC service thread 1-6) VM Arguments: -D[Server:server-one] -Xms64m -Xmx512m -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Djboss.default.jgoups.stack=tcp -Djboss.home.dir=/usr/local/infinispan-server-8.2.4.Final -Djboss.modules.system.pkgs=org.jboss.byteman -Djboss.server.log.dir=/usr/local/infinispan-server-8.2.4.Final/domain/servers/server-one/log -Djboss.server.temp.dir=/usr/local/infinispan-server-8.2.4.Final/domain/servers/server-one/tmp -Djboss.server.data.dir=/usr/local/infinispan-server-8.2.4.Final/domain/servers/server-one/data -Dorg.jboss.boot.log.file=/usr/local/infinispan-server-8.2.4.Final/domain/servers/server-one/log/server.log -Dlogging.configuration=file:/usr/local/infinispan-server-8.2.4.Final/domain/configuration/default-server-logging.properties 
+2017-01-23 20:44:40,584 INFO  [org.xnio] (MSC service thread 1-1) XNIO version 3.3.4.Final
+2017-01-23 20:44:40,599 INFO  [org.xnio.nio] (MSC service thread 1-1) XNIO NIO Implementation Version 3.3.4.Final
+2017-01-23 20:44:40,661 INFO  [org.jboss.remoting] (MSC service thread 1-3) JBoss Remoting version 4.0.18.Final
+2017-01-23 20:44:43,014 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) WFLYCTL0028: Attribute 'default-stack' in the resource at address '/subsystem=datagrid-jgroups' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-01-23 20:44:43,440 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 17) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+2017-01-23 20:44:43,472 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 27) Activating Infinispan subsystem.
+2017-01-23 20:44:43,474 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 19) WFLYSEC0002: Activating Security Subsystem
+2017-01-23 20:44:43,474 INFO  [org.infinispan.server.jgroups] (ServerService Thread Pool -- 25) DGJGRP0001: Activating JGroups subsystem.
+2017-01-23 20:44:43,476 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 21) WFLYNAM0001: Activating Naming Subsystem
+2017-01-23 20:44:43,505 INFO  [org.jboss.as.security] (MSC service thread 1-7) WFLYSEC0001: Current PicketBox version=4.9.4.Final
+2017-01-23 20:44:43,514 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 28) WFLYIO001: Worker 'default' has auto-configured to 32 core threads with 256 task threads based on your 16 available processors
+2017-01-23 20:44:43,518 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 29) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2017-01-23 20:44:43,716 INFO  [org.jboss.as.connector] (MSC service thread 1-2) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.3.2.Final)
+2017-01-23 20:44:43,727 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) WFLYJCA0018: Started Driver service with driver-name = h2
+2017-01-23 20:44:43,737 INFO  [org.jboss.as.naming] (MSC service thread 1-1) WFLYNAM0003: Starting Naming Service
+2017-01-23 20:44:44,248 WARN  [org.infinispan.configuration.cache.IndexingConfigurationBuilder] (ServerService Thread Pool -- 27) ISPN000403: No indexable classes were defined for this indexed cache; switching to autodetection (support for autodetection will be removed in Infinispan 9.0).
+2017-01-23 20:44:44,323 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2017-01-23 20:44:50,791 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (MSC service thread 1-1) ISPN000078: Starting JGroups channel clustered
+2017-01-23 20:44:50,828 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (MSC service thread 1-1) ISPN000094: Received new cluster view for channel clustered: [host1:server-one|0] (1) [host1:server-one]
+2017-01-23 20:44:50,842 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (MSC service thread 1-1) ISPN000079: Channel clustered local address is host1:server-one, physical addresses are [172.30.174.231:7600]
+2017-01-23 20:44:50,854 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-1) ISPN000128: Infinispan version: Infinispan 'Chakra' 8.2.4.Final
+2017-01-23 20:44:50,995 WARN  [org.infinispan.configuration.cache.IndexingConfigurationBuilder] (MSC service thread 1-2) ISPN000403: No indexable classes were defined for this indexed cache; switching to autodetection (support for autodetection will be removed in Infinispan 9.0).
+2017-01-23 20:44:51,014 WARN  [org.infinispan.configuration.cache.IndexingConfigurationBuilder] (MSC service thread 1-2) ISPN000403: No indexable classes were defined for this indexed cache; switching to autodetection (support for autodetection will be removed in Infinispan 9.0).
+2017-01-23 20:44:51,028 WARN  [org.infinispan.configuration.cache.IndexingConfigurationBuilder] (MSC service thread 1-2) ISPN000403: No indexable classes were defined for this indexed cache; switching to autodetection (support for autodetection will be removed in Infinispan 9.0).
+2017-01-23 20:44:51,876 INFO  [org.infinispan.expiration.impl.ExpirationManagerImpl] (MSC service thread 1-5) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2017-01-23 20:44:51,876 INFO  [org.infinispan.expiration.impl.ExpirationManagerImpl] (MSC service thread 1-8) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2017-01-23 20:44:51,876 INFO  [org.infinispan.expiration.impl.ExpirationManagerImpl] (MSC service thread 1-3) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2017-01-23 20:44:51,911 INFO  [org.jboss.as.clustering.infinispan] (MSC service thread 1-5) DGISPN0001: Started default cache from clustered container
+2017-01-23 20:44:51,911 INFO  [org.jboss.as.clustering.infinispan] (MSC service thread 1-8) DGISPN0001: Started AutoCACache cache from clustered container
+2017-01-23 20:44:51,911 INFO  [org.jboss.as.clustering.infinispan] (MSC service thread 1-3) DGISPN0001: Started memcachedCache cache from clustered container
+2017-01-23 20:44:51,916 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-2) DGENDPT10000: WebSocketServer starting
+2017-01-23 20:44:51,917 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-8) DGENDPT10000: REST starting
+2017-01-23 20:44:51,916 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-4) DGENDPT10000: MemcachedServer starting
+2017-01-23 20:44:51,917 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-6) DGENDPT10000: HotRodServer starting
+2017-01-23 20:44:51,920 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-4) DGENDPT10001: MemcachedServer listening on 172.30.174.231:11211
+2017-01-23 20:44:51,920 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-6) DGENDPT10001: HotRodServer listening on 172.30.174.231:11222
+2017-01-23 20:44:51,920 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-2) DGENDPT10001: WebSocketServer listening on 172.30.174.231:8181
+2017-01-23 20:44:52,030 INFO  [org.jboss.as.clustering.infinispan] (MSC service thread 1-8) DGISPN0001: Started ___protobuf_metadata cache from clustered container
+2017-01-23 20:44:52,054 INFO  [org.jboss.as.clustering.infinispan] (MSC service thread 1-8) DGISPN0001: Started ___script_cache cache from clustered container
+2017-01-23 20:44:52,178 WARN  [org.infinispan.server.core.transport.NettyTransport] (MSC service thread 1-4) ISPN005028: Native Epoll transport not available, using NIO instead: /tmp/libnetty-transport-native-epoll1955024668740062060.so: /tmp/libnetty-transport-native-epoll1955024668740062060.so: failed to map segment from shared object: Operation not permitted
+2017-01-23 20:44:52,178 WARN  [org.infinispan.server.core.transport.NettyTransport] (MSC service thread 1-2) ISPN005028: Native Epoll transport not available, using NIO instead: /tmp/libnetty-transport-native-epoll1955024668740062060.so: /tmp/libnetty-transport-native-epoll1955024668740062060.so: failed to map segment from shared object: Operation not permitted
+2017-01-23 20:44:52,178 WARN  [org.infinispan.server.core.transport.NettyTransport] (MSC service thread 1-6) ISPN005028: Native Epoll transport not available, using NIO instead: /tmp/libnetty-transport-native-epoll1955024668740062060.so: /tmp/libnetty-transport-native-epoll1955024668740062060.so: failed to map segment from shared object: Operation not permitted
+2017-01-23 20:44:52,382 INFO  [org.jboss.as.clustering.infinispan] (MSC service thread 1-6) DGISPN0001: Started ___hotRodTopologyCache cache from clustered container
+2017-01-23 20:44:52,576 INFO  [org.infinispan.rest.NettyRestServer] (MSC service thread 1-8) ISPN012003: REST server starting, listening on 172.30.174.231:8080
+2017-01-23 20:44:52,577 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-8) DGENDPT10002: REST mapped to /rest
+2017-01-23 20:44:52,775 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: Infinispan Server 8.2.4.Final (WildFly Core 2.0.10.Final) started in 14073ms - Started 188 of 258 services (147 services are lazy, passive or on-demand)
+2017-01-23 20:44:53,982 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (Incoming-2,host1:server-one) ISPN000094: Received new cluster view for channel clustered: [host1:server-one|1] (2) [host1:server-one, host1:server-two]
+2017-01-23 20:44:56,265 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t4) ISPN000310: Starting cluster-wide rebalance for cache memcachedCache, topology CacheTopology{id=2, rebalanceId=2, currentCH=DefaultConsistentHash{ns=20, owners = (1)[host1:server-one: 20+0]}, pendingCH=DefaultConsistentHash{ns=20, owners = (2)[host1:server-one: 10+10, host1:server-two: 10+10]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two]}
+2017-01-23 20:44:56,265 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t2) ISPN000310: Starting cluster-wide rebalance for cache default, topology CacheTopology{id=2, rebalanceId=2, currentCH=DefaultConsistentHash{ns=20, owners = (1)[host1:server-one: 20+0]}, pendingCH=DefaultConsistentHash{ns=20, owners = (2)[host1:server-one: 10+10, host1:server-two: 10+10]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two]}
+2017-01-23 20:44:56,265 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t3) ISPN000310: Starting cluster-wide rebalance for cache AutoCACache, topology CacheTopology{id=2, rebalanceId=2, currentCH=DefaultConsistentHash{ns=60, owners = (1)[host1:server-one: 60+0]}, pendingCH=DefaultConsistentHash{ns=60, owners = (2)[host1:server-one: 31+29, host1:server-two: 29+31]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two]}
+2017-01-23 20:44:56,276 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t3) [Context=AutoCACache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:44:56,276 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t4) [Context=memcachedCache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:44:56,276 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t2) [Context=default][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:44:56,293 INFO  [org.jboss.as.clustering.infinispan] (remote-thread--p2-t4) DGISPN0001: Started ___event_log_cache cache from clustered container
+2017-01-23 20:44:56,311 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t21) [Context=memcachedCache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:44:56,311 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t22) [Context=default][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:44:56,312 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t23) [Context=AutoCACache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:44:56,436 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t14) [Context=default][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:44:56,436 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t15) [Context=memcachedCache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:44:56,436 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t16) [Context=AutoCACache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:44:56,439 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t15) ISPN000336: Finished cluster-wide rebalance for cache memcachedCache, topology id = 2
+2017-01-23 20:44:56,439 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t14) ISPN000336: Finished cluster-wide rebalance for cache default, topology id = 2
+2017-01-23 20:44:56,442 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t16) ISPN000336: Finished cluster-wide rebalance for cache AutoCACache, topology id = 2
+2017-01-23 20:44:56,556 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t17) ISPN000310: Starting cluster-wide rebalance for cache ___protobuf_metadata, topology CacheTopology{id=2, rebalanceId=2, currentCH=ReplicatedConsistentHash{ns = 256, owners = (1)[host1:server-one: 256]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (2)[host1:server-one: 122, host1:server-two: 134]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two]}
+2017-01-23 20:44:56,558 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t17) [Context=___protobuf_metadata][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:44:56,562 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t14) [Context=___protobuf_metadata][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:44:56,614 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t20) ISPN000310: Starting cluster-wide rebalance for cache ___script_cache, topology CacheTopology{id=2, rebalanceId=2, currentCH=ReplicatedConsistentHash{ns = 256, owners = (1)[host1:server-one: 256]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (2)[host1:server-one: 122, host1:server-two: 134]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two]}
+2017-01-23 20:44:56,615 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t20) [Context=___script_cache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:44:56,620 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t15) [Context=___script_cache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:44:56,621 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t21) [Context=___protobuf_metadata][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:44:56,625 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t21) ISPN000336: Finished cluster-wide rebalance for cache ___protobuf_metadata, topology id = 2
+2017-01-23 20:44:56,669 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t23) [Context=___script_cache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:44:56,671 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t23) ISPN000336: Finished cluster-wide rebalance for cache ___script_cache, topology id = 2
+2017-01-23 20:44:56,983 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t24) ISPN000310: Starting cluster-wide rebalance for cache ___hotRodTopologyCache, topology CacheTopology{id=2, rebalanceId=2, currentCH=ReplicatedConsistentHash{ns = 256, owners = (1)[host1:server-one: 256]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (2)[host1:server-one: 122, host1:server-two: 134]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two]}
+2017-01-23 20:44:56,984 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t24) [Context=___hotRodTopologyCache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:44:56,987 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t2) [Context=___hotRodTopologyCache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:44:57,034 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t2) [Context=___hotRodTopologyCache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:44:57,037 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t2) ISPN000336: Finished cluster-wide rebalance for cache ___hotRodTopologyCache, topology id = 2
+2017-01-23 20:45:33,754 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (Incoming-2,host1:server-one) ISPN000094: Received new cluster view for channel clustered: [host1:server-one|2] (3) [host1:server-one, host1:server-two, host2:server-three]
+2017-01-23 20:45:36,066 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t7) ISPN000310: Starting cluster-wide rebalance for cache memcachedCache, topology CacheTopology{id=4, rebalanceId=3, currentCH=DefaultConsistentHash{ns=20, owners = (2)[host1:server-one: 10+10, host1:server-two: 10+10]}, pendingCH=DefaultConsistentHash{ns=20, owners = (3)[host1:server-one: 7+7, host1:server-two: 7+4, host2:server-three: 6+9]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-three]}
+2017-01-23 20:45:36,066 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t6) ISPN000310: Starting cluster-wide rebalance for cache default, topology CacheTopology{id=4, rebalanceId=3, currentCH=DefaultConsistentHash{ns=20, owners = (2)[host1:server-one: 10+10, host1:server-two: 10+10]}, pendingCH=DefaultConsistentHash{ns=20, owners = (3)[host1:server-one: 7+7, host1:server-two: 7+4, host2:server-three: 6+9]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-three]}
+2017-01-23 20:45:36,067 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t7) [Context=memcachedCache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:45:36,067 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t6) [Context=default][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:45:36,068 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t5) ISPN000310: Starting cluster-wide rebalance for cache AutoCACache, topology CacheTopology{id=4, rebalanceId=3, currentCH=DefaultConsistentHash{ns=60, owners = (2)[host1:server-one: 31+29, host1:server-two: 29+31]}, pendingCH=DefaultConsistentHash{ns=60, owners = (3)[host1:server-one: 21+39, host1:server-two: 20+40, host2:server-three: 19+41]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-three]}
+2017-01-23 20:45:36,069 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t16) [Context=memcachedCache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,069 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t5) [Context=AutoCACache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:45:36,069 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t18) [Context=default][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,075 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t20) [Context=AutoCACache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,079 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t9) [Context=default][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,079 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t8) [Context=memcachedCache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,089 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t10) [Context=AutoCACache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,189 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t21) [Context=memcachedCache][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,189 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t20) [Context=default][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,189 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t22) [Context=AutoCACache][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,190 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t20) ISPN000336: Finished cluster-wide rebalance for cache default, topology id = 4
+2017-01-23 20:45:36,190 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t21) ISPN000336: Finished cluster-wide rebalance for cache memcachedCache, topology id = 4
+2017-01-23 20:45:36,191 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t22) ISPN000336: Finished cluster-wide rebalance for cache AutoCACache, topology id = 4
+2017-01-23 20:45:36,324 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t23) ISPN000310: Starting cluster-wide rebalance for cache ___protobuf_metadata, topology CacheTopology{id=4, rebalanceId=3, currentCH=ReplicatedConsistentHash{ns = 256, owners = (2)[host1:server-one: 122, host1:server-two: 134]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (3)[host1:server-one: 81, host1:server-two: 90, host2:server-three: 85]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-three]}
+2017-01-23 20:45:36,325 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t23) [Context=___protobuf_metadata][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:45:36,329 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t11) [Context=___protobuf_metadata][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,333 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t24) [Context=___protobuf_metadata][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,388 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t1) ISPN000310: Starting cluster-wide rebalance for cache ___script_cache, topology CacheTopology{id=4, rebalanceId=3, currentCH=ReplicatedConsistentHash{ns = 256, owners = (2)[host1:server-one: 122, host1:server-two: 134]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (3)[host1:server-one: 81, host1:server-two: 90, host2:server-three: 85]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-three]}
+2017-01-23 20:45:36,389 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t1) [Context=___script_cache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:45:36,393 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t4) [Context=___script_cache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,398 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t4) [Context=___script_cache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,424 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t3) [Context=___protobuf_metadata][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,425 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t3) ISPN000336: Finished cluster-wide rebalance for cache ___protobuf_metadata, topology id = 4
+2017-01-23 20:45:36,454 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t7) [Context=___script_cache][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,455 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t7) ISPN000336: Finished cluster-wide rebalance for cache ___script_cache, topology id = 4
+2017-01-23 20:45:36,771 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t5) ISPN000310: Starting cluster-wide rebalance for cache ___hotRodTopologyCache, topology CacheTopology{id=4, rebalanceId=3, currentCH=ReplicatedConsistentHash{ns = 256, owners = (2)[host1:server-one: 122, host1:server-two: 134]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (3)[host1:server-one: 81, host1:server-two: 90, host2:server-three: 85]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-three]}
+2017-01-23 20:45:36,772 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t5) [Context=___hotRodTopologyCache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:45:36,774 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t24) [Context=___hotRodTopologyCache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,781 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t8) [Context=___hotRodTopologyCache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,834 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t11) [Context=___hotRodTopologyCache][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:45:36,835 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t11) ISPN000336: Finished cluster-wide rebalance for cache ___hotRodTopologyCache, topology id = 4
+2017-01-23 20:45:37,110 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (Incoming-2,host1:server-one) ISPN000094: Received new cluster view for channel clustered: [host1:server-one|3] (4) [host1:server-one, host1:server-two, host2:server-three, host2:server-four]
+2017-01-23 20:45:39,382 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t18) ISPN000310: Starting cluster-wide rebalance for cache default, topology CacheTopology{id=6, rebalanceId=4, currentCH=DefaultConsistentHash{ns=20, owners = (3)[host1:server-one: 7+7, host1:server-two: 7+4, host2:server-three: 6+9]}, pendingCH=DefaultConsistentHash{ns=20, owners = (4)[host1:server-one: 5+6, host1:server-two: 5+4, host2:server-three: 5+5, host2:server-four: 5+5]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-three, host2:server-four]}
+2017-01-23 20:45:39,382 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t16) ISPN000310: Starting cluster-wide rebalance for cache AutoCACache, topology CacheTopology{id=6, rebalanceId=4, currentCH=DefaultConsistentHash{ns=60, owners = (3)[host1:server-one: 21+39, host1:server-two: 20+40, host2:server-three: 19+41]}, pendingCH=DefaultConsistentHash{ns=60, owners = (4)[host1:server-one: 16+28, host1:server-two: 12+32, host2:server-three: 16+26, host2:server-four: 16+34]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-three, host2:server-four]}
+2017-01-23 20:45:39,382 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t17) ISPN000310: Starting cluster-wide rebalance for cache memcachedCache, topology CacheTopology{id=6, rebalanceId=4, currentCH=DefaultConsistentHash{ns=20, owners = (3)[host1:server-one: 7+7, host1:server-two: 7+4, host2:server-three: 6+9]}, pendingCH=DefaultConsistentHash{ns=20, owners = (4)[host1:server-one: 5+6, host1:server-two: 5+4, host2:server-three: 5+5, host2:server-four: 5+5]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-three, host2:server-four]}
+2017-01-23 20:45:39,384 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t18) [Context=default][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:45:39,384 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t17) [Context=memcachedCache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:45:39,384 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t16) [Context=AutoCACache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:45:39,386 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t11) [Context=default][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,386 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t1) [Context=memcachedCache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,388 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t17) [Context=AutoCACache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,398 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t20) [Context=memcachedCache][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,399 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t23) [Context=memcachedCache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,398 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t21) [Context=AutoCACache][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,398 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t19) [Context=default][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,399 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t22) [Context=default][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,400 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t24) [Context=AutoCACache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,503 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t9) [Context=memcachedCache][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,503 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t10) [Context=default][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,504 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t10) ISPN000336: Finished cluster-wide rebalance for cache default, topology id = 6
+2017-01-23 20:45:39,504 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t9) ISPN000336: Finished cluster-wide rebalance for cache memcachedCache, topology id = 6
+2017-01-23 20:45:39,511 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t12) [Context=AutoCACache][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,512 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t12) ISPN000336: Finished cluster-wide rebalance for cache AutoCACache, topology id = 6
+2017-01-23 20:45:39,616 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t11) ISPN000310: Starting cluster-wide rebalance for cache ___protobuf_metadata, topology CacheTopology{id=6, rebalanceId=4, currentCH=ReplicatedConsistentHash{ns = 256, owners = (3)[host1:server-one: 81, host1:server-two: 90, host2:server-three: 85]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (4)[host1:server-one: 61, host1:server-two: 67, host2:server-three: 61, host2:server-four: 67]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-three, host2:server-four]}
+2017-01-23 20:45:39,617 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t11) [Context=___protobuf_metadata][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:45:39,619 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t21) [Context=___protobuf_metadata][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,621 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t13) [Context=___protobuf_metadata][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,625 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t15) [Context=___protobuf_metadata][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,679 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t18) ISPN000310: Starting cluster-wide rebalance for cache ___script_cache, topology CacheTopology{id=6, rebalanceId=4, currentCH=ReplicatedConsistentHash{ns = 256, owners = (3)[host1:server-one: 81, host1:server-two: 90, host2:server-three: 85]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (4)[host1:server-one: 61, host1:server-two: 67, host2:server-three: 61, host2:server-four: 67]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-three, host2:server-four]}
+2017-01-23 20:45:39,679 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t18) [Context=___script_cache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:45:39,681 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t13) [Context=___script_cache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,684 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t16) [Context=___script_cache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,686 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t17) [Context=___script_cache][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,717 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t19) [Context=___protobuf_metadata][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,718 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t19) ISPN000336: Finished cluster-wide rebalance for cache ___protobuf_metadata, topology id = 6
+2017-01-23 20:45:39,727 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t23) [Context=___script_cache][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:45:39,727 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t23) ISPN000336: Finished cluster-wide rebalance for cache ___script_cache, topology id = 6
+2017-01-23 20:45:41,930 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t24) ISPN000310: Starting cluster-wide rebalance for cache ___hotRodTopologyCache, topology CacheTopology{id=6, rebalanceId=4, currentCH=ReplicatedConsistentHash{ns = 256, owners = (3)[host1:server-one: 81, host1:server-two: 90, host2:server-three: 85]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (4)[host1:server-one: 61, host1:server-two: 67, host2:server-three: 61, host2:server-four: 67]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-three, host2:server-four]}
+2017-01-23 20:45:41,931 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t24) [Context=___hotRodTopologyCache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:45:41,934 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t25) [Context=___hotRodTopologyCache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:45:41,938 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t22) [Context=___hotRodTopologyCache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:45:41,938 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t25) [Context=___hotRodTopologyCache][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:45:41,985 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t6) [Context=___hotRodTopologyCache][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:45:41,986 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t6) ISPN000336: Finished cluster-wide rebalance for cache ___hotRodTopologyCache, topology id = 6
+2017-01-23 20:48:04,703 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:48:04,706 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:48:07,178 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:48:07,179 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:48:09,179 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:48:09,180 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:48:09,690 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (Incoming-1,host1:server-one) ISPN000093: Received new, MERGED cluster view for channel clustered: MergeView::[host1:server-one|5] (3) [host1:server-one, host1:server-two, host2:server-four], 1 subgroups: [host1:server-one|3] (4) [host1:server-one, host1:server-two, host2:server-three, host2:server-four]
+2017-01-23 20:48:11,181 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:48:11,182 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:48:11,731 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t21) ISPN000310: Starting cluster-wide rebalance for cache AutoCACache, topology CacheTopology{id=14, rebalanceId=8, currentCH=DefaultConsistentHash{ns=60, owners = (3)[host1:server-one: 20+24, host1:server-two: 18+26, host2:server-four: 22+28]}, pendingCH=DefaultConsistentHash{ns=60, owners = (3)[host1:server-one: 21+39, host1:server-two: 18+42, host2:server-four: 21+39]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-four]}
+2017-01-23 20:48:11,732 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t21) [Context=AutoCACache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:48:11,740 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t8) ISPN000310: Starting cluster-wide rebalance for cache default, topology CacheTopology{id=14, rebalanceId=8, currentCH=DefaultConsistentHash{ns=20, owners = (3)[host1:server-one: 8+3, host1:server-two: 7+2, host2:server-four: 5+5]}, pendingCH=DefaultConsistentHash{ns=20, owners = (3)[host2:server-four: 7+8, host1:server-one: 7+8, host1:server-two: 6+4]}, unionCH=null, actualMembers=[host2:server-four, host1:server-one, host1:server-two]}
+2017-01-23 20:48:11,740 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t9) ISPN000310: Starting cluster-wide rebalance for cache memcachedCache, topology CacheTopology{id=14, rebalanceId=8, currentCH=DefaultConsistentHash{ns=20, owners = (3)[host1:server-one: 8+3, host1:server-two: 7+2, host2:server-four: 5+5]}, pendingCH=DefaultConsistentHash{ns=20, owners = (3)[host2:server-four: 7+8, host1:server-one: 7+8, host1:server-two: 6+4]}, unionCH=null, actualMembers=[host2:server-four, host1:server-one, host1:server-two]}
+2017-01-23 20:48:11,741 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t8) [Context=default][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:48:11,741 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t9) [Context=memcachedCache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:48:11,743 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t19) ISPN000310: Starting cluster-wide rebalance for cache ___hotRodTopologyCache, topology CacheTopology{id=14, rebalanceId=8, currentCH=ReplicatedConsistentHash{ns = 256, owners = (3)[host1:server-one: 85, host1:server-two: 90, host2:server-four: 81]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (3)[host1:server-one: 85, host1:server-two: 88, host2:server-four: 83]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-four]}
+2017-01-23 20:48:11,744 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t19) [Context=___hotRodTopologyCache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:48:11,745 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t14) ISPN000310: Starting cluster-wide rebalance for cache ___protobuf_metadata, topology CacheTopology{id=14, rebalanceId=8, currentCH=ReplicatedConsistentHash{ns = 256, owners = (3)[host1:server-one: 85, host1:server-two: 90, host2:server-four: 81]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (3)[host1:server-one: 85, host1:server-two: 88, host2:server-four: 83]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-four]}
+2017-01-23 20:48:11,746 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t14) [Context=___protobuf_metadata][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:48:11,747 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t18) [Context=___hotRodTopologyCache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,752 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t15) [Context=___protobuf_metadata][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,762 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t13) [Context=___hotRodTopologyCache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,762 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t15) [Context=___hotRodTopologyCache][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,762 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t11) [Context=___protobuf_metadata][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,764 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t13) ISPN000310: Starting cluster-wide rebalance for cache ___script_cache, topology CacheTopology{id=14, rebalanceId=8, currentCH=ReplicatedConsistentHash{ns = 256, owners = (3)[host1:server-one: 85, host1:server-two: 90, host2:server-four: 81]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (3)[host1:server-one: 85, host1:server-two: 88, host2:server-four: 83]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-four]}
+2017-01-23 20:48:11,764 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t15) ISPN000336: Finished cluster-wide rebalance for cache ___hotRodTopologyCache, topology id = 14
+2017-01-23 20:48:11,765 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t13) [Context=___script_cache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:48:11,765 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t17) [Context=___protobuf_metadata][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,772 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t24) [Context=default][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,776 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t13) [Context=___script_cache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,781 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t24) [Context=memcachedCache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,776 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t22) [Context=___script_cache][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,783 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t2) [Context=___script_cache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,783 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t6) [Context=default][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,780 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t17) ISPN000336: Finished cluster-wide rebalance for cache ___protobuf_metadata, topology id = 14
+2017-01-23 20:48:11,787 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t25) [Context=memcachedCache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,788 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t1) [Context=AutoCACache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:48:11,791 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t22) ISPN000336: Finished cluster-wide rebalance for cache ___script_cache, topology id = 14
+2017-01-23 20:48:11,796 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t17) [Context=AutoCACache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:48:12,656 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t10) [Context=AutoCACache][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:48:12,657 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t9) [Context=memcachedCache][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:48:12,657 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t13) [Context=default][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:48:12,658 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t10) ISPN000336: Finished cluster-wide rebalance for cache AutoCACache, topology id = 14
+2017-01-23 20:48:12,658 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t9) ISPN000336: Finished cluster-wide rebalance for cache memcachedCache, topology id = 14
+2017-01-23 20:48:12,658 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t13) ISPN000336: Finished cluster-wide rebalance for cache default, topology id = 14
+2017-01-23 20:48:13,183 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:48:13,184 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:48:15,184 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:48:15,185 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:48:17,186 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:48:17,186 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:48:19,187 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:48:19,188 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:49:50,556 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:49:50,557 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:49:53,037 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:49:53,038 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:49:55,039 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:49:55,039 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:49:55,539 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (Incoming-1,host1:server-one) ISPN000093: Received new, MERGED cluster view for channel clustered: MergeView::[host1:server-one|6] (4) [host1:server-one, host2:server-three, host1:server-two, host2:server-four], 1 subgroups: [host1:server-one|5] (3) [host1:server-one, host1:server-two, host2:server-four]
+2017-01-23 20:49:55,560 WARN  [org.infinispan.CLUSTER] (transport-thread--p4-t21) [Context=AutoCACache]ISPN000314: Lost at least half of the stable members, possible split brain causing data inconsistency. Current members are [host2:server-four, host2:server-three], lost members are [92ef19e8-e9b5-b925-7600-83b5253494e4, 7fecc7b4-c64b-d01e-909b-cd2a5470e047], stable members are [host2:server-three, host2:server-four, 92ef19e8-e9b5-b925-7600-83b5253494e4, 7fecc7b4-c64b-d01e-909b-cd2a5470e047]
+2017-01-23 20:49:55,561 FATAL [org.infinispan.CLUSTER] (transport-thread--p4-t6) [Context=memcachedCache]ISPN000313: Lost data because of abrupt leavers [92ef19e8-e9b5-b925-7600-83b5253494e4, 7fecc7b4-c64b-d01e-909b-cd2a5470e047]
+2017-01-23 20:49:55,561 FATAL [org.infinispan.CLUSTER] (transport-thread--p4-t5) [Context=default]ISPN000313: Lost data because of abrupt leavers [92ef19e8-e9b5-b925-7600-83b5253494e4, 7fecc7b4-c64b-d01e-909b-cd2a5470e047]
+2017-01-23 20:49:55,561 WARN  [org.infinispan.CLUSTER] (transport-thread--p4-t12) [Context=___hotRodTopologyCache]ISPN000314: Lost at least half of the stable members, possible split brain causing data inconsistency. Current members are [host2:server-four, host2:server-three], lost members are [92ef19e8-e9b5-b925-7600-83b5253494e4, 7fecc7b4-c64b-d01e-909b-cd2a5470e047], stable members are [92ef19e8-e9b5-b925-7600-83b5253494e4, 7fecc7b4-c64b-d01e-909b-cd2a5470e047, host2:server-three, host2:server-four]
+2017-01-23 20:49:55,562 WARN  [org.infinispan.CLUSTER] (transport-thread--p4-t19) [Context=___protobuf_metadata]ISPN000314: Lost at least half of the stable members, possible split brain causing data inconsistency. Current members are [host2:server-four, host2:server-three], lost members are [92ef19e8-e9b5-b925-7600-83b5253494e4, 7fecc7b4-c64b-d01e-909b-cd2a5470e047], stable members are [92ef19e8-e9b5-b925-7600-83b5253494e4, 7fecc7b4-c64b-d01e-909b-cd2a5470e047, host2:server-three, host2:server-four]
+2017-01-23 20:49:55,563 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t21) ISPN000310: Starting cluster-wide rebalance for cache AutoCACache, topology CacheTopology{id=18, rebalanceId=10, currentCH=DefaultConsistentHash{ns=60, owners = (2)[host2:server-three: 32+15, host2:server-four: 28+15]}, pendingCH=DefaultConsistentHash{ns=60, owners = (4)[host1:server-one: 16+28, host1:server-two: 12+32, host2:server-four: 16+34, host2:server-three: 16+26]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-four, host2:server-three]}
+2017-01-23 20:49:55,567 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t21) [Context=AutoCACache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:49:55,566 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t5) ISPN000310: Starting cluster-wide rebalance for cache default, topology CacheTopology{id=18, rebalanceId=10, currentCH=DefaultConsistentHash{ns=20, owners = (2)[host2:server-three: 10+3, host2:server-four: 10+5]}, pendingCH=DefaultConsistentHash{ns=20, owners = (4)[host2:server-three: 5+5, host2:server-four: 5+5, host1:server-one: 5+6, host1:server-two: 5+4]}, unionCH=null, actualMembers=[host2:server-three, host2:server-four, host1:server-one, host1:server-two]}
+2017-01-23 20:49:55,566 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t6) ISPN000310: Starting cluster-wide rebalance for cache memcachedCache, topology CacheTopology{id=18, rebalanceId=10, currentCH=DefaultConsistentHash{ns=20, owners = (2)[host2:server-three: 10+3, host2:server-four: 10+5]}, pendingCH=DefaultConsistentHash{ns=20, owners = (4)[host2:server-three: 5+5, host2:server-four: 5+5, host1:server-one: 5+6, host1:server-two: 5+4]}, unionCH=null, actualMembers=[host2:server-three, host2:server-four, host1:server-one, host1:server-two]}
+2017-01-23 20:49:55,569 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t5) [Context=default][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:49:55,569 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t6) [Context=memcachedCache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:49:55,566 WARN  [org.infinispan.CLUSTER] (transport-thread--p4-t9) [Context=___script_cache]ISPN000314: Lost at least half of the stable members, possible split brain causing data inconsistency. Current members are [host2:server-four, host2:server-three], lost members are [92ef19e8-e9b5-b925-7600-83b5253494e4, 7fecc7b4-c64b-d01e-909b-cd2a5470e047], stable members are [92ef19e8-e9b5-b925-7600-83b5253494e4, 7fecc7b4-c64b-d01e-909b-cd2a5470e047, host2:server-three, host2:server-four]
+2017-01-23 20:49:55,578 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t23) [Context=default][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,580 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t20) [Context=memcachedCache][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,583 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t19) ISPN000310: Starting cluster-wide rebalance for cache ___protobuf_metadata, topology CacheTopology{id=18, rebalanceId=10, currentCH=ReplicatedConsistentHash{ns = 256, owners = (2)[host2:server-three: 124, host2:server-four: 132]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (4)[host1:server-one: 61, host1:server-two: 67, host2:server-four: 67, host2:server-three: 61]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-four, host2:server-three]}
+2017-01-23 20:49:55,587 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t19) [Context=___protobuf_metadata][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:49:55,587 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t12) ISPN000310: Starting cluster-wide rebalance for cache ___hotRodTopologyCache, topology CacheTopology{id=18, rebalanceId=10, currentCH=ReplicatedConsistentHash{ns = 256, owners = (2)[host2:server-three: 124, host2:server-four: 132]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (4)[host1:server-one: 61, host1:server-two: 67, host2:server-four: 67, host2:server-three: 61]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-four, host2:server-three]}
+2017-01-23 20:49:55,592 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t12) [Context=___hotRodTopologyCache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:49:55,595 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t24) [Context=___protobuf_metadata][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,602 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t2) [Context=___protobuf_metadata][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,606 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t1) [Context=___hotRodTopologyCache][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,602 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t17) [Context=default][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,607 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t9) ISPN000310: Starting cluster-wide rebalance for cache ___script_cache, topology CacheTopology{id=18, rebalanceId=10, currentCH=ReplicatedConsistentHash{ns = 256, owners = (2)[host2:server-three: 124, host2:server-four: 132]}, pendingCH=ReplicatedConsistentHash{ns = 256, owners = (4)[host1:server-one: 61, host1:server-two: 67, host2:server-four: 67, host2:server-three: 61]}, unionCH=null, actualMembers=[host1:server-one, host1:server-two, host2:server-four, host2:server-three]}
+2017-01-23 20:49:55,621 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t3) [Context=AutoCACache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,620 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t6) [Context=default][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,625 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t6) [Context=memcachedCache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,625 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t9) [Context=___script_cache][Context=host1:server-one]ISPN100002: Started local rebalance
+2017-01-23 20:49:55,620 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t21) [Context=memcachedCache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,620 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t23) [Context=AutoCACache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,611 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t4) [Context=___hotRodTopologyCache][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,647 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t5) [Context=___script_cache][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,655 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t12) [Context=___script_cache][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,661 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t9) [Context=___hotRodTopologyCache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,661 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t10) [Context=___protobuf_metadata][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,670 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t14) [Context=___script_cache][Context=host1:server-two]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,680 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t13) [Context=___protobuf_metadata][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,682 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t13) ISPN000336: Finished cluster-wide rebalance for cache ___protobuf_metadata, topology id = 18
+2017-01-23 20:49:55,689 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t16) [Context=___hotRodTopologyCache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,689 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t16) ISPN000336: Finished cluster-wide rebalance for cache ___hotRodTopologyCache, topology id = 18
+2017-01-23 20:49:55,689 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t7) [Context=___script_cache][Context=host1:server-one]ISPN100003: Finished local rebalance
+2017-01-23 20:49:55,693 INFO  [org.infinispan.CLUSTER] (transport-thread--p4-t7) ISPN000336: Finished cluster-wide rebalance for cache ___script_cache, topology id = 18
+2017-01-23 20:49:57,040 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:49:57,042 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:49:57,207 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t1) [Context=default][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:49:57,207 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t1) ISPN000336: Finished cluster-wide rebalance for cache default, topology id = 18
+2017-01-23 20:49:57,207 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t7) [Context=AutoCACache][Context=host2:server-four]ISPN100003: Finished local rebalance
+2017-01-23 20:49:57,210 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t6) [Context=AutoCACache][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:49:57,210 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t22) [Context=memcachedCache][Context=host2:server-three]ISPN100003: Finished local rebalance
+2017-01-23 20:49:57,210 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t6) ISPN000336: Finished cluster-wide rebalance for cache AutoCACache, topology id = 18
+2017-01-23 20:49:57,212 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t22) ISPN000336: Finished cluster-wide rebalance for cache memcachedCache, topology id = 18
+2017-01-23 20:49:59,042 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:49:59,043 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:50:01,043 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:50:01,044 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:50:03,045 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:50:03,046 WARN  [org.jgroups.protocols.TCP] (Timer-3,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message
+2017-01-23 20:50:05,046 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 7fecc7b4-c64b-d01e-909b-cd2a5470e047, dropping message
+2017-01-23 20:50:05,047 WARN  [org.jgroups.protocols.TCP] (Timer-2,host1:server-one) JGRP000032: host1:server-one: no physical address for 92ef19e8-e9b5-b925-7600-83b5253494e4, dropping message

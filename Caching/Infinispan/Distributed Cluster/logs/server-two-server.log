@@ -1,0 +1,143 @@
+2017-01-23 20:44:43,645 INFO  [org.jboss.modules] (main) JBoss Modules version 1.5.1.Final
+2017-01-23 20:44:44,143 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2017-01-23 20:44:44,356 INFO  [org.jboss.as] (MSC service thread 1-6) WFLYSRV0049: Infinispan Server 8.2.4.Final (WildFly Core 2.0.10.Final) starting
+2017-01-23 20:44:44,359 DEBUG [org.jboss.as.config] (MSC service thread 1-6) Configured system properties:
+	[Server:server-two] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /usr/local/infinispan-server-8.2.4.Final/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/java/jre1.8.0_102/lib/endorsed
+	java.ext.dirs = /usr/java/jre1.8.0_102/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/java/jre1.8.0_102
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/jre1.8.0_102/lib/amd64/server:/usr/java/jre1.8.0_102/lib/amd64:/usr/java/jre1.8.0_102/../lib/amd64::/lib64:/usr/lib64:/usr/local/lib64:/lib:/usr/lib/gcc:/usr/local/lib:/asw/lib:/usr/local/intel:/usr/lib64/libglib-2.0.so.0.2200.5:/h/SPTasker/SPTasker/Linux64_Runtime_Libs:/ora01/app/oracle/product/11g/jdbc/lib:/usr/java/jre1.8.0_102/lib/amd64/server:/asw/asw_obsproc/obsproc/lib/c:/usr/lib/oracle/11.2/client64/lib:/lib64:/usr/lib64:/usr/local/lib64:/lib:/usr/lib/gcc:/usr/local/lib:/asw/lib:/usr/local/intel:/usr/lib64/libglib-2.0.so.0.2200.5:/h/SPTasker/SPTasker/Linux64_Runtime_Libs:/ora01/app/oracle/product/11g/jdbc/lib:/usr/java/jre1.8.0_102/lib/amd64/server:/asw/asw_obsproc/obsproc/lib/c:/usr/lib/oracle/11.2/client64/lib:/lib64:/usr/lib64:/usr/local/lib64:/lib:/usr/lib/gcc:/usr/local/lib:/asw/lib:/usr/local/intel:/usr/lib64/libglib-2.0.so.0.2200.5:/h/SPTasker/SPTasker/Linux64_Runtime_Libs:/ora01/app/oracle/product/11g/jdbc/lib:/usr/java/jre1.8.0_102/lib/amd64/server:/asw/asw_obsproc/obsproc/lib/c:/usr/lib/oracle/11.2/client64/lib:/lib64:/usr/lib64:/usr/local/lib64:/lib:/usr/lib/gcc:/usr/local/lib:/asw/lib:/usr/local/intel:/usr/lib64/libglib-2.0.so.0.2200.5:/h/SPTasker/SPTasker/Linux64_Runtime_Libs:/ora01/app/oracle/product/11g/jdbc/lib:/usr/java/jre1.8.0_102/lib/amd64/server:/asw/asw_obsproc/obsproc/lib/c:/usr/lib/oracle/11.2/client64/lib:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_102-b14
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_102
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.102-b14
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.default.jgoups.stack = tcp
+	jboss.domain.base.dir = /usr/local/infinispan-server-8.2.4.Final/domain
+	jboss.domain.config.dir = /usr/local/infinispan-server-8.2.4.Final/domain/configuration
+	jboss.home.dir = /usr/local/infinispan-server-8.2.4.Final
+	jboss.host.name = jmsbaswca1-01
+	jboss.modules.dir = /usr/local/infinispan-server-8.2.4.Final/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = host1:server-two
+	jboss.qualified.host.name = jmsbaswca1-01
+	jboss.server.base.dir = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-two
+	jboss.server.config.dir = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-two/configuration
+	jboss.server.data.dir = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-two/data
+	jboss.server.deploy.dir = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-two/data/content
+	jboss.server.log.dir = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-two/log
+	jboss.server.name = server-two
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-two/tmp
+	line.separator = 
+
+	logging.configuration = file:/usr/local/infinispan-server-8.2.4.Final/domain/configuration/default-server-logging.properties
+	module.path = /usr/local/infinispan-server-8.2.4.Final/modules
+	org.jboss.boot.log.file = /usr/local/infinispan-server-8.2.4.Final/domain/servers/server-two/log/server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 3.10.0-327.36.1.el7.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/java/jre1.8.0_102/lib/resources.jar:/usr/java/jre1.8.0_102/lib/rt.jar:/usr/java/jre1.8.0_102/lib/sunrsasign.jar:/usr/java/jre1.8.0_102/lib/jsse.jar:/usr/java/jre1.8.0_102/lib/jce.jar:/usr/java/jre1.8.0_102/lib/charsets.jar:/usr/java/jre1.8.0_102/lib/jfr.jar:/usr/java/jre1.8.0_102/classes
+	sun.boot.library.path = /usr/java/jre1.8.0_102/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /usr/local/infinispan-server-8.2.4.Final/jboss-modules.jar -mp /usr/local/infinispan-server-8.2.4.Final/modules org.jboss.as.server
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /usr/local/infinispan-server-8.2.4.Final
+	user.home = /home/ispn
+	user.language = en
+	user.name = ispn
+	user.timezone = Africa/Monrovia
+2017-01-23 20:44:44,360 DEBUG [org.jboss.as.config] (MSC service thread 1-6) VM Arguments: -D[Server:server-two] -Xms64m -Xmx512m -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Djboss.default.jgoups.stack=tcp -Djboss.home.dir=/usr/local/infinispan-server-8.2.4.Final -Djboss.modules.system.pkgs=org.jboss.byteman -Djboss.server.log.dir=/usr/local/infinispan-server-8.2.4.Final/domain/servers/server-two/log -Djboss.server.temp.dir=/usr/local/infinispan-server-8.2.4.Final/domain/servers/server-two/tmp -Djboss.server.data.dir=/usr/local/infinispan-server-8.2.4.Final/domain/servers/server-two/data -Dorg.jboss.boot.log.file=/usr/local/infinispan-server-8.2.4.Final/domain/servers/server-two/log/server.log -Dlogging.configuration=file:/usr/local/infinispan-server-8.2.4.Final/domain/configuration/default-server-logging.properties 
+2017-01-23 20:44:44,522 INFO  [org.xnio] (MSC service thread 1-1) XNIO version 3.3.4.Final
+2017-01-23 20:44:44,538 INFO  [org.xnio.nio] (MSC service thread 1-1) XNIO NIO Implementation Version 3.3.4.Final
+2017-01-23 20:44:44,604 INFO  [org.jboss.remoting] (MSC service thread 1-1) JBoss Remoting version 4.0.18.Final
+2017-01-23 20:44:46,732 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 7) WFLYCTL0028: Attribute 'default-stack' in the resource at address '/subsystem=datagrid-jgroups' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-01-23 20:44:47,128 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 17) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+2017-01-23 20:44:47,160 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 19) WFLYSEC0002: Activating Security Subsystem
+2017-01-23 20:44:47,161 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 21) WFLYNAM0001: Activating Naming Subsystem
+2017-01-23 20:44:47,167 INFO  [org.jboss.as.security] (MSC service thread 1-1) WFLYSEC0001: Current PicketBox version=4.9.4.Final
+2017-01-23 20:44:47,168 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 27) Activating Infinispan subsystem.
+2017-01-23 20:44:47,174 INFO  [org.infinispan.server.jgroups] (ServerService Thread Pool -- 25) DGJGRP0001: Activating JGroups subsystem.
+2017-01-23 20:44:47,216 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 28) WFLYIO001: Worker 'default' has auto-configured to 32 core threads with 256 task threads based on your 16 available processors
+2017-01-23 20:44:47,216 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 29) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2017-01-23 20:44:47,407 INFO  [org.jboss.as.connector] (MSC service thread 1-2) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.3.2.Final)
+2017-01-23 20:44:47,445 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0018: Started Driver service with driver-name = h2
+2017-01-23 20:44:47,500 INFO  [org.jboss.as.naming] (MSC service thread 1-5) WFLYNAM0003: Starting Naming Service
+2017-01-23 20:44:47,945 WARN  [org.infinispan.configuration.cache.IndexingConfigurationBuilder] (ServerService Thread Pool -- 27) ISPN000403: No indexable classes were defined for this indexed cache; switching to autodetection (support for autodetection will be removed in Infinispan 9.0).
+2017-01-23 20:44:48,013 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2017-01-23 20:44:55,126 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (MSC service thread 1-4) ISPN000078: Starting JGroups channel clustered
+2017-01-23 20:44:55,162 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (MSC service thread 1-4) ISPN000094: Received new cluster view for channel clustered: [host1:server-one|1] (2) [host1:server-one, host1:server-two]
+2017-01-23 20:44:55,178 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (MSC service thread 1-4) ISPN000079: Channel clustered local address is host1:server-two, physical addresses are [172.30.174.231:7750]
+2017-01-23 20:44:55,249 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-4) ISPN000128: Infinispan version: Infinispan 'Chakra' 8.2.4.Final
+2017-01-23 20:44:55,401 WARN  [org.infinispan.configuration.cache.IndexingConfigurationBuilder] (MSC service thread 1-1) ISPN000403: No indexable classes were defined for this indexed cache; switching to autodetection (support for autodetection will be removed in Infinispan 9.0).
+2017-01-23 20:44:55,410 WARN  [org.infinispan.configuration.cache.IndexingConfigurationBuilder] (MSC service thread 1-1) ISPN000403: No indexable classes were defined for this indexed cache; switching to autodetection (support for autodetection will be removed in Infinispan 9.0).
+2017-01-23 20:44:55,419 WARN  [org.infinispan.configuration.cache.IndexingConfigurationBuilder] (MSC service thread 1-1) ISPN000403: No indexable classes were defined for this indexed cache; switching to autodetection (support for autodetection will be removed in Infinispan 9.0).
+2017-01-23 20:44:56,246 INFO  [org.infinispan.expiration.impl.ExpirationManagerImpl] (MSC service thread 1-5) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2017-01-23 20:44:56,246 INFO  [org.infinispan.expiration.impl.ExpirationManagerImpl] (MSC service thread 1-6) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2017-01-23 20:44:56,247 INFO  [org.infinispan.expiration.impl.ExpirationManagerImpl] (MSC service thread 1-8) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2017-01-23 20:44:56,448 INFO  [org.jboss.as.clustering.infinispan] (MSC service thread 1-5) DGISPN0001: Started memcachedCache cache from clustered container
+2017-01-23 20:44:56,452 INFO  [org.jboss.as.clustering.infinispan] (MSC service thread 1-6) DGISPN0001: Started default cache from clustered container
+2017-01-23 20:44:56,452 INFO  [org.jboss.as.clustering.infinispan] (MSC service thread 1-8) DGISPN0001: Started AutoCACache cache from clustered container
+2017-01-23 20:44:56,454 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-6) DGENDPT10000: REST starting
+2017-01-23 20:44:56,456 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-2) DGENDPT10000: HotRodServer starting
+2017-01-23 20:44:56,456 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-7) DGENDPT10000: WebSocketServer starting
+2017-01-23 20:44:56,457 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-3) DGENDPT10000: MemcachedServer starting
+2017-01-23 20:44:56,461 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-7) DGENDPT10001: WebSocketServer listening on 172.30.174.231:8331
+2017-01-23 20:44:56,461 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-2) DGENDPT10001: HotRodServer listening on 172.30.174.231:11372
+2017-01-23 20:44:56,461 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-3) DGENDPT10001: MemcachedServer listening on 172.30.174.231:11361
+2017-01-23 20:44:56,577 INFO  [org.jboss.as.clustering.infinispan] (MSC service thread 1-6) DGISPN0001: Started ___protobuf_metadata cache from clustered container
+2017-01-23 20:44:56,628 INFO  [org.jboss.as.clustering.infinispan] (MSC service thread 1-2) DGISPN0001: Started ___script_cache cache from clustered container
+2017-01-23 20:44:56,757 WARN  [org.infinispan.server.core.transport.NettyTransport] (MSC service thread 1-3) ISPN005028: Native Epoll transport not available, using NIO instead: /tmp/libnetty-transport-native-epoll6049127302347108078.so: /tmp/libnetty-transport-native-epoll6049127302347108078.so: failed to map segment from shared object: Operation not permitted
+2017-01-23 20:44:56,757 WARN  [org.infinispan.server.core.transport.NettyTransport] (MSC service thread 1-7) ISPN005028: Native Epoll transport not available, using NIO instead: /tmp/libnetty-transport-native-epoll6049127302347108078.so: /tmp/libnetty-transport-native-epoll6049127302347108078.so: failed to map segment from shared object: Operation not permitted
+2017-01-23 20:44:56,757 WARN  [org.infinispan.server.core.transport.NettyTransport] (MSC service thread 1-2) ISPN005028: Native Epoll transport not available, using NIO instead: /tmp/libnetty-transport-native-epoll6049127302347108078.so: /tmp/libnetty-transport-native-epoll6049127302347108078.so: failed to map segment from shared object: Operation not permitted
+2017-01-23 20:44:57,042 INFO  [org.jboss.as.clustering.infinispan] (MSC service thread 1-2) DGISPN0001: Started ___hotRodTopologyCache cache from clustered container
+2017-01-23 20:44:57,190 INFO  [org.infinispan.rest.NettyRestServer] (MSC service thread 1-6) ISPN012003: REST server starting, listening on 172.30.174.231:8230
+2017-01-23 20:44:57,191 INFO  [org.infinispan.server.endpoint] (MSC service thread 1-6) DGENDPT10002: REST mapped to /rest
+2017-01-23 20:44:57,381 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: Infinispan Server 8.2.4.Final (WildFly Core 2.0.10.Final) started in 14826ms - Started 188 of 258 services (147 services are lazy, passive or on-demand)
+2017-01-23 20:45:33,784 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (Incoming-2,host1:server-two) ISPN000094: Received new cluster view for channel clustered: [host1:server-one|2] (3) [host1:server-one, host1:server-two, host2:server-three]
+2017-01-23 20:45:37,131 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (Incoming-2,host1:server-two) ISPN000094: Received new cluster view for channel clustered: [host1:server-one|3] (4) [host1:server-one, host1:server-two, host2:server-three, host2:server-four]
+2017-01-23 20:48:09,709 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (Incoming-2,host1:server-two) ISPN000093: Received new, MERGED cluster view for channel clustered: MergeView::[host1:server-one|5] (3) [host1:server-one, host1:server-two, host2:server-four], 1 subgroups: [host1:server-one|3] (4) [host1:server-one, host1:server-two, host2:server-three, host2:server-four]
+2017-01-23 20:49:55,542 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (Incoming-2,host1:server-two) ISPN000093: Received new, MERGED cluster view for channel clustered: MergeView::[host1:server-one|6] (4) [host1:server-one, host2:server-three, host1:server-two, host2:server-four], 1 subgroups: [host1:server-one|5] (3) [host1:server-one, host1:server-two, host2:server-four]
