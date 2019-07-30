@@ -1,0 +1,45 @@
+https://developer.jboss.org/thread/268463
+https://developer.jboss.org/thread/202900
+https://docs.jboss.org/author/display/ISPN/Listeners+and+Notifications
+https://github.com/infinispan/infinispan
+https://github.com/infinispan/infinispan-cachestore-archetype
+https://github.com/wburns/infinispan-queryable-custom-loader/tree/master
+https://github.com/infinispan/infinispan/blob/2974aebce9bdb3aa0b1472b02fbd6bf01ee7dc1a/server/integration/testsuite/src/test/resources/config/infinispan/customcs.xml
+
+Cache Loader:
+A cache loader is the mechanism that reads entries that have been placed in a Cache Store—a form of persistent storage. The entries are fetched from the store lazily, when there is a cache miss (that is, when the entry is not found in memory). When modifications are made to the data in memory, the cache store is notified of the change so that the entry in persistent store can be updated.
+JBoss Cache is shipped with a single cache loader interface. 
+Infinispan has broken this up into two separate interfaces
+    CacheLoader, which loads the entries from persistant storage, and 
+    CacheStore, which extends CacheLoader and exposes methods to store state as well. 
+  This makes it simpler to define read-only sources.
+
+loaders element:
+<loaders passivation="true" shared="false" preload="false">
+  <loader class="org.infinispan.loaders.file.FileCacheStore" fetchPersistentState="false" purgeOnStartup="false">
+    <properties>
+      <property name="location" value="${java.io.tmpdir}"/>
+    </properties>
+  </loader>
+</loaders>
+
+passivation: When set to true, entries that are evicted are removed from memory, and they are persisted using a cache store (for example, filesystem, database, and others). With passivation enabled (by default it is disabled), the cache uses the cache store just like a swapping memory area in an operating system.
+The next attribute, shared, means that the cache loader is shared among different cache instances in the cluster
+Finally, if preload is set to true, when the cache starts, data stored in the cache loader will be preloaded eagerly into memory. Note that preloading is done per node. No replication or distribution of the preloaded data will happen. Also, Infinispan honors the configured maximum number of entries in eviction, when loading data from the cache; preloading defaults to false.
+
+class:
+==============
+org.infinispan.persistance.file.SingleFileStore
+
+
+
+<namedCache name="evictionCache">
+<eviction
+maxEntries="1000"
+strategy="LRU"
+/>
+<expiration
+wakeUpInterval="500"
+lifespan="60000"
+maxIdle="10000"
+/>
