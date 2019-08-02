@@ -1,4 +1,4 @@
- 
+https://developer.jboss.org/thread/272493 
 
 <cache-container name="clustered" default-cache="default" statistics="true">
 
