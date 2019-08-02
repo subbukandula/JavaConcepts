@@ -1,4 +1,16 @@
 https://developer.jboss.org/thread/272493 
+https://access.redhat.com/documentation/en-us/red_hat_data_grid/7.2/html/administration_and_configuration_guide/eviction_and_expiration
+
+Eviction
+        Removes unused entries from memory after the number of entries in the cache reaches a maximum limit.
+        The operation is local to a single cache instance. It removes entries from memory only.
+        Executes each time an entry is added or updated in the cache. 
+
+Expiration
+        Removes entries from memory after a certain amount of time.
+        The operation is cluster-wide. It removes entries from memory across all cache instances and also removes entries from the cache store.
+        Expiration operations are processed by threads that you can configure with the ExpirationManager interface. 
+
 
 <cache-container name="clustered" default-cache="default" statistics="true">
 
