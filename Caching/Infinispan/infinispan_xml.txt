@@ -1,0 +1,341 @@
+ 
+
+<cache-container name="clustered" default-cache="default" statistics="true">
+
+                <transport lock-timeout="60000"/>
+
+ 
+
+ 
+
+                <distributed-cache name="default" mode="SYNC" segments="20" owners="2" remote-timeout="30000" start="EAGER">
+
+                    <locking acquire-timeout="30000" concurrency-level="1000" striping="false"/>
+
+                    <transaction mode="NONE"/>
+
+                </distributed-cache>
+
+                <distributed-cache name="memcachedCache" mode="SYNC" segments="20" owners="2" remote-timeout="30000" start="EAGER">
+
+                    <locking acquire-timeout="30000" concurrency-level="1000" striping="false"/>
+
+                    <transaction mode="NONE"/>
+
+                </distributed-cache>
+
+ 
+
+                <replicated-cache-configuration name="sevenDayConfiguration" mode="SYNC" remote-timeout="30000" start="EAGER" >
+
+                    <transaction mode="NONE"/>
+
+                    <eviction strategy="LIRS" size="20000" type="COUNT"/>
+
+                    <file-store
+
+                            shared="false" preload="true"
+
+                            fetch-state="true"
+
+                            read-only="false"
+
+                            purge="false"
+
+                            path="/var/lq_cache" passivation="false">
+
+                    </file-store>
+
+                    <!--Lifespan- 7 Days in ms -->
+
+                    <expiration lifespan="604800000" interval="5000" />
+
+                </replicated-cache-configuration>
+
+                <replicated-cache-configuration name="maxConfiguratoin" mode="SYNC" remote-timeout="30000" start="EAGER" >
+
+                    <transaction mode="NONE"/>
+
+                    <eviction strategy="LIRS" size="20000" type="COUNT"/>
+
+                    <file-store
+
+                            shared="false" preload="true"
+
+                            fetch-state="true"
+
+                            read-only="false"
+
+                            purge="false"
+
+                            path="/var/lq_cache" passivation="false">
+
+                    </file-store>
+
+ 
+
+                    <!-- max lifespan -->
+
+                    <expiration lifespan="-1" interval="-1" />
+
+                </replicated-cache-configuration>
+
+ 
+
+                <replicated-cache name="reviewCache" configuration="sevenDayConfiguration">
+
+                </replicated-cache>
+
+                <replicated-cache name="rewardsCache" configuration="sevenDayConfiguration">
+
+                </replicated-cache>
+
+                <replicated-cache name="stateProvinceCache" configuration="sevenDayConfiguration">
+
+                </replicated-cache>
+
+                <replicated-cache name="timezoneCache" configuration="sevenDayConfiguration">
+
+                </replicated-cache>
+
+                <replicated-cache name="securityTokenCache" mode="SYNC" remote-timeout="30000" start="EAGER" >
+
+                    <transaction mode="NONE"/>
+
+                    <eviction strategy="LIRS" size="20000" type="COUNT"/>
+
+                    <file-store
+
+                            shared="false" preload="true"
+
+                            fetch-state="true"
+
+                            read-only="false"
+
+                            purge="false"
+
+                            path="/var/lq_cache" passivation="false">
+
+                    </file-store>
+
+ 
+
+                    <!--Lifespan- 6 hours in ms, wakeup/interval 1 hour, max-idle 1 hour -->
+
+                    <expiration lifespan="21600000" interval="3600000" max-idle="3600000"/>
+
+                </replicated-cache>
+
+                <replicated-cache name="rateCodesCache" mode="SYNC" remote-timeout="30000" start="EAGER" >
+
+                    <transaction mode="NONE"/>
+
+                    <eviction strategy="LIRS" size="20000" type="COUNT"/>
+
+                    <file-store
+
+                            shared="false" preload="true"
+
+                            fetch-state="true"
+
+                            read-only="false"
+
+                            purge="false"
+
+                            path="/var/lq_cache" passivation="false">
+
+                    </file-store>
+
+ 
+
+                    <!--Lifespan- 10 minutes in ms, wakeup/interval 1 minute, max-idle 10 minute -->
+
+                    <expiration lifespan="600000" interval="60000" max-idle="600000"/>
+
+                </replicated-cache>
+
+                <replicated-cache name="concurrentCreateProfileCache" mode="SYNC" remote-timeout="30000" start="EAGER" >
+
+                    <transaction mode="NONE"/>
+
+                    <eviction strategy="LIRS" size="5000" type="COUNT"/>
+
+ 
+
+                    <!--Lifespan- 1 minute -->
+
+                    <expiration lifespan="60000" interval="5000" />
+
+                </replicated-cache>
+
+                <replicated-cache name="currencyCache" mode="SYNC" remote-timeout="30000" start="EAGER" >
+
+                    <transaction mode="NONE"/>
+
+                    <eviction strategy="LIRS" size="20000" type="COUNT"/>
+
+                    <file-store
+
+                            shared="false" preload="true"
+
+                            fetch-state="true"
+
+                            read-only="false"
+
+                            purge="false"
+
+                            path="/var/lq_cache" passivation="false">
+
+                    </file-store>
+
+ 
+
+                    <!--Lifespan- 10 minutes in ms, wakeup/interval 1 minute, max-idle 10 minute -->
+
+                    <expiration lifespan="600000" interval="60000" max-idle="600000"/>
+
+                </replicated-cache>
+
+                <replicated-cache name="XmlCache" configuration="maxConfiguratoin">
+
+                </replicated-cache>
+
+                <replicated-cache name="minMetroRateCache" configuration="maxConfiguratoin">
+
+                </replicated-cache>
+
+                <replicated-cache name=".preferencesCache" configuration="maxConfiguratoin">
+
+                </replicated-cache>
+
+                <replicated-cache name="propertyCache" configuration="maxConfiguratoin">
+
+                </replicated-cache>
+
+                <replicated-cache name="weekendDealsCache" configuration="maxConfiguratoin">
+
+                </replicated-cache>
+
+                <replicated-cache name="resetPasswordSecurityTokenCache" configuration="maxConfiguratoin">
+
+                </replicated-cache>
+
+                <replicated-cache name="roomTypeCache" configuration="maxConfiguratoin">
+
+                </replicated-cache>
+
+ 
+
+                <replicated-cache name="batchStatusCache" mode="SYNC" remote-timeout="30000" start="EAGER" >
+
+                    <transaction mode="NONE"/>
+
+                    <eviction strategy="LIRS" size="20000" type="COUNT"/>
+
+                    <file-store
+
+                            shared="false" preload="true"
+
+                            fetch-state="true"
+
+                            read-only="false"
+
+                            purge="false"
+
+                            path="/var/lq_cache" passivation="false">
+
+                    </file-store>
+
+ 
+
+                    <!--Lifespan- 30 Days in ms, wakeup/interval 5000 ms, max-idle 10 minute -->
+
+                    <expiration lifespan="2592000000" interval="5000"/>
+
+                </replicated-cache>
+
+            </cache-container>
+
+ 
+
+The cache appears to be working:
+
+ 
+
+---------------------------------------------
+
+*** Cache Statistics  for Cache - XmlCache ***
+
+---------------------------------------------
+
+>> currentNumberOfEntries=887
+
+>> currentNumberOfEntries=887
+
+>> globalRemoveHits=0
+
+>> globalRemoveHits=0
+
+>> removeMisses=0
+
+>> removeMisses=0
+
+>> globalRetrievals=14
+
+>> globalRetrievals=14
+
+>> stores=889
+
+>> stores=889
+
+>> retrievals=14
+
+>> retrievals=14
+
+>> globalHits=14
+
+>> globalHits=14
+
+>> globalRemoveMisses=0
+
+>> globalRemoveMisses=0
+
+>> hits=14
+
+>> hits=14
+
+>> removeHits=0
+
+>> removeHits=0
+
+>> totalBytesRead=200898007
+
+>> totalBytesRead=200898007
+
+>> timeSinceStart=8949
+
+>> timeSinceStart=8949
+
+>> globalCurrentNumberOfEntries=887
+
+>> globalCurrentNumberOfEntries=887
+
+>> totalNumberOfEntries=889
+
+>> totalNumberOfEntries=889
+
+>> misses=0
+
+>> misses=0
+
+>> globalMisses=0
+
+>> globalMisses=0
+
+>> totalBytesWritten=2834364
+
+>> totalBytesWritten=2834364
+
+>> globalStores=889
+
+>> globalStores=889
