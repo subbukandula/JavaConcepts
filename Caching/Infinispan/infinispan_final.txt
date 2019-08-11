@@ -31,6 +31,20 @@ class:
 ==============
 org.infinispan.persistance.file.SingleFileStore
 
+Cache Store
+
+Persistance
+	passivation --> False --> means everything written in memory is also be written in disk/cache store
+	Store --> File Store
+	preload --> true/false
+	
+
+Locking
+Expiration
+
+Passivation is a mode of storing entries in the cache store only when they are evicted from memory.
+1) Enabled, the cache uses the cache store as an overflow tank, akin to swapping memory pages to disk in virtual memory implementations in operating systems.
+2) Disabled, cache store behaves as a Write-through (or Write-behind if asynchronous) cache, where all entries in memory are also maintained in the cache store. The effect of this is that the cache store will always contain a superset of what is in memory.
 
 
 <namedCache name="evictionCache">
