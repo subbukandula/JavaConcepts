@@ -1,0 +1,21 @@
+
+Problem
+
+When running a job with a Java Client or Java Transformer stage, the stage throws an exception such as: java.net.SocketException: java.lang.ClassNotFoundException: Cannot find the specified class com.ibm.websphere.ssl.protocol.SSLSocketFactory
+Cause
+
+This problem can occur when the underlying java implementation uses sockets. The socket factory that is used is specified in the ASBNode/apps/jre/lib/security/java.security file, but the CLASSPATH does not include the required jars containing the classes.
+Resolving The Problem
+
+The class identified in the exception is located in com.ibm.ws.security.crypto.jar and this jar has a dependency on com.ibm.ws.ejb.thinclient_7.0.0.jar. Both of these jars are in the ASBNode\eclipse\plugins\com.ibm.isf.client directory. The problem can be resolved by adding these to the Classpath setting in the stage.
+
+OR
+
+The code should use the JSSE Socket Factory by either including these lines in the initialize() method:
+
+Security.setProperty("ssl.SocketFactory.provider", "com.ibm.jsse2.SSLSocketFactoryImpl");
+Security.setProperty("ssl.ServerSocketFactory.provider", "com.ibm.jsse2.SSLServerSocketFactoryImpl");
+
+...or these properties should be set as user properties in the stage when the JVM is invoked.
+
+These solutions need to be tested. The customer resolved by changing the ASBNode/apps/jre/lib/security/java.security file to point to the JSSE Socket Factory, which engineering does not recommend.
