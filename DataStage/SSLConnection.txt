@@ -19,3 +19,48 @@ Security.setProperty("ssl.ServerSocketFactory.provider", "com.ibm.jsse2.SSLServe
 ...or these properties should be set as user properties in the stage when the JVM is invoked.
 
 These solutions need to be tested. The customer resolved by changing the ASBNode/apps/jre/lib/security/java.security file to point to the JSSE Socket Factory, which engineering does not recommend.
+
+
+The problem is caused by the “IBM WebSphere Application Server V8.5.5 Developer Tools for Eclipse Kepler V8.5.5.2” plugin. There is also a bug report at IBM.
+
+When the IBM WebSphere plugin gets loaded it tries to find out if the ssl.SocketFactory.provider property is defined in the <JRE_HOME>\lib\security\java.security file. If the property is not defined the WebSphere plugin assumes that it must configure the ssl.SocketFactory.provider and therefore sets the security property to com.ibm.websphere.ssl.protocol.SSLSocketFactory programmatically via System.setProperty(String, String). Sadly the class com.ibm.websphere.ssl.protocol.SSLSocketFactory is not visible to other eclipse plugins than the IBM WebSphere plugin and thus the ClassNotFoundException is raised when trying to connect to an SSL socket.
+
+The problematic code in websphere is located in the <WAS_HOME>/plugins/com.ibm.ws.runtime.jar in the class com.ibm.ws.ssl.provider.AbstractJSSEProvider. The com.ibm.ws.ssl.provider.AbstractJSSEProvider sets the ssl.SocketFactory.provider if the java.security configuration property is null.
+
+So if we want to prevent the com.ibm.ws.ssl.provider.AbstractJSSEProvider from setting the ibm socket factory we must set a ssl.SocketFactory.provider in the <JRE_HOME>\lib\security\java.security.
+
+But here comes another tricky part. We can NOT simply set the ssl.SocketFactory.provider to the javax.net.ssl.DefaultSSLSocketFactory. This might end in an InstantiationException, because the DefaultSSLSocketFactory only has package scope and therefore only classes in the same package like the javax.net.ssl.SSLSocketFactory have access to it. If another component reads the security property and tries to instantiate it via reflection (e.g. using commons httpclient) you might get an exception like this:
+javax.net.ssl.DefaultSSLSocketFactory is package scoped
+Java
+1
+2
+3
+4
+5
+6
+7
+8
+9
+	
+Caused by: java.lang.InstantiationException: javax.net.ssl.DefaultSSLSocketFactory
+	at java.lang.Class.newInstance(Class.java:359)
+	at javax.net.ssl.SSLSocketFactory.getDefault(SSLSocketFactory.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.commons.httpclient.protocol.ReflectionSocketFactory.createSocket(ReflectionSocketFactory.java:112)
+	... 25 more
+
+So we need an solution that prevents the websphere plugin class  com.ibm.ws.ssl.provider.AbstractJSSEProvider from setting IBM WebSphere’s SSL socket factory and instead use the DefaultSSLSocketFactory even if we have not specified it explicitly.
+Solution
+
+Edit the <JRE_HOME>\lib\security\java.security file of the JVM that runs eclipse and ensure that the ssl.SocketFactory.provider and ssl.ServerSocketFactory.provider are empty.
+
+I prefer to leave them just empty so that javax.net.ssl.SSLSocketFactory will load the default factories.
+Java
+
+ssl.SocketFactory.provider=
+ssl.ServerSocketFactory.provider=
+
+This solution works because the websphere class com.ibm.ws.ssl.provider.AbstractJSSEProvider checks if the properties are null or not. Since the properties are defined but don’t define a value the value is an empty string. So the IBM WebSphere’s plugin will not set it’s own factory and default implementation of the JDK will load the DefaultSSLSocketFactory, because it can not load a class with an empty name.
