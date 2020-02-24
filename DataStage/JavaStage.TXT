@@ -1,0 +1,19 @@
+Infoshpere DataStage is the data Integration component of IBM Infosphere Information Server
+It provides graphical design tools for develping jobs
+it extracts, transforms and loads data
+it has multi source and multi target
+Provides partitioning and parallel processing
+
+
+Datastage project is a separated environement on the server for jobs, table definitions and routines
+Datastage jobs - stages linked together to define data and process flow.
+job sequences - sequence of jobs to be executed and actions to take depending on results
+Shared containers --> Repository
+Stages --> predefined or buildin component that provides specific functionality (Palette)
+    Used to preuse Java Integration, DB2 integration etc..
+Table definitions - set of related columns definations that are stored in the repository.
+
+
+DATASTAGE_JRE=C:\IBM\InformationServer\_jvm\jre
+DATASTAGE_JVM=bin\j9vm
+DSHOME=C:\IBM\InformationServer\Server\DSEngine
