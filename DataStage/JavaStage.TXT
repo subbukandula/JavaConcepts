@@ -17,3 +17,6 @@ Table definitions - set of related columns definations that are stored in the re
 DATASTAGE_JRE=C:\IBM\InformationServer\_jvm\jre
 DATASTAGE_JVM=bin\j9vm
 DSHOME=C:\IBM\InformationServer\Server\DSEngine
+
+DataStage Administrator -> Project -> Command
+sh -c 'java -version'
